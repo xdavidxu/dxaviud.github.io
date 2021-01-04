@@ -4,12 +4,15 @@ myHeading.textContent = "Hello World!";
 console.log("Hello World!");
 
 let image = document.querySelector("img");
+let figure = document.querySelector("figure");
 image.onclick = function() {
     let src = image.getAttribute("src");
     if (src === "images/cat1.png") {
         image.setAttribute("src", "images/cat2.jpg");
+        figure.setAttribute("figcaption", "Also from icatcare.org");
     } else {
         image.setAttribute("src", "images/cat1.png");
+        figure.setAttribute("figcaption", "From icatcare.org");
     }
 }
 
