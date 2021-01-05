@@ -5,9 +5,10 @@ html {
 }
 
 h1 {
+    color: aquamarine;
     margin: 0;
-    padding: 20px 0;
-    text-shadow: 3px 3px 0 aquamarine;
+    padding: 10px 0;
+    text-shadow: 3px 3px 0px crimson;
     font-size: 40px;
     text-align: center;
 }
@@ -20,9 +21,9 @@ p, li {
 body {
     width: 1000px;
     margin: 0 auto;
-    background-color: orange;
+    background-color: black;
     padding: 0 20px 20px 20px;
-    border: 5px solid black;
+    color: white;
 }
 
 img {
