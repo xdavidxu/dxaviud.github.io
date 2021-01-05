@@ -22,7 +22,7 @@ function setUserName() {
         setUserName();
     } else {
         localStorage.setItem("name", userName);
-        myHeading.textContent = "Hello " + userName;
+        myHeading.textContent = userName;
     }
 }
 
@@ -30,7 +30,7 @@ if (!localStorage.getItem("name")) {
     setUserName();
 } else {
     let storedName = localStorage.getItem("name");
-    myHeading.textContent = "Hello " + storedName;
+    myHeading.textContent = storedName;
 }
 
 let button = document.querySelector("button");
