@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <meta charset="utf-8">
         <meta name="author" content="David Xu">
         <meta name="description" content="David Xu's first website. GitHub source code: https://github.com/dxaviud/dxaviud.github.io">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link href="styles/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cambria" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cambria">
         <script src="scripts/main.js" defer></script>
         <title>David Xu</title>
     </head>
     <body>
-        <h1>David Xu</h1>
+        <h1 id="top">David Xu</h1>
+        <p>Here is a link to this site's <a href="https://github.com/dxaviud/dxaviud.github.io" target="_blank">source code</a>.</p>
+        <p>Here is a link to my <a href="https://github.com/dxaviud" target="_blank">GitHub</a>.</p>
+        <a href="#bottom">Go to bottom</a>
         <h2>This is the subtitle (h2)</h2>
         <h3>This is h3</h3>
-        <h4>This is h4</h4>
+        <h4>This is h4. Using h4 and below is not advisable</h4>
         <h5>This is h5</h5>
         <h6>This is h6</h6>
 
-        <p>
-            This is a paragraph. Line break! <br> Blah blah blah.
-        </p>
-        <hr>
-        <p>
-            <b><i><u>This is bold, italic, and underlined!</u></i></b>
-        </p>
+        <p>This is a paragraph. Line break! <br> Blah blah blah.</p>
 
-        <a href="https://www.google.com" target="_blank">Link to google, opens in new page<br></a>
+        <hr>
+
+        <p><b><i><u>This paragraph element is bold, italic, and underlined!</u></i></b></p>
+
         <figure>
-            <img src="images/cat1.png" border="10" >
+            <img src="images/cat1.png" alt="Cat image" border="10">
             <figcaption>From icatcare.org</figcaption>
         </figure>
         
@@ -67,10 +67,10 @@
             </tr>
         </table>
 
-        <p>This is <b>poggers</b>.</p>
+        <p>This is <strong>poggers</strong>.</p>
         
         <button>Change User</button>
-
+        <p><a href="#top" id="bottom">Go to top</a></p>
     </body>
 </html>
 
