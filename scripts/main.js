@@ -1,5 +1,5 @@
-const myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello World!";
+const heading = document.querySelector("h1");
+heading.textContent = "David Xu";
 
 console.log("Hello World!");
 
@@ -22,16 +22,16 @@ function setUserName() {
         setUserName();
     } else {
         localStorage.setItem("name", userName);
-        myHeading.textContent = userName;
+        heading.textContent = userName;
     }
 }
 
-if (!localStorage.getItem("name")) {
-    setUserName();
-} else {
-    let storedName = localStorage.getItem("name");
-    myHeading.textContent = storedName;
-}
+// if (!localStorage.getItem("name")) {
+//     setUserName();
+// } else {
+//     let storedName = localStorage.getItem("name");
+//     myHeading.textContent = storedName;
+// }
 
 let button = document.querySelector("button");
 button.onclick = function() {
