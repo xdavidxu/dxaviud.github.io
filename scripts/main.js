@@ -1,12 +1,17 @@
-const heading = document.querySelector("h1");
-heading.textContent = "David Xu";
-
 console.log("Hello World!");
 
-let image = document.querySelector("img");
-let figureCaption = document.querySelector("figcaption");
+const heading = document.querySelector("h1");
+// if (!localStorage.getItem("name")) {
+//     setUserName();
+// } else {
+//     let storedName = localStorage.getItem("name");
+//     myHeading.textContent = storedName;
+// }
+
+const image = document.querySelector("img");
+const figureCaption = document.querySelector("figcaption");
 image.onclick = function() {
-    let src = image.getAttribute("src");
+    const src = image.getAttribute("src");
     if (src === "images/cat1.png") {
         image.setAttribute("src", "images/cat2.jpg");
         figureCaption.textContent = "Also from icatcare.org";
@@ -17,7 +22,7 @@ image.onclick = function() {
 }
 
 function setUserName() {
-    let userName = prompt("Please enter your name.");
+    const userName = prompt("Please enter your name.");
     if (!userName) {
         setUserName();
     } else {
@@ -26,14 +31,7 @@ function setUserName() {
     }
 }
 
-// if (!localStorage.getItem("name")) {
-//     setUserName();
-// } else {
-//     let storedName = localStorage.getItem("name");
-//     myHeading.textContent = storedName;
-// }
-
-let button = document.querySelector("button");
+const button = document.querySelector("button");
 button.onclick = function() {
     setUserName();
 }
