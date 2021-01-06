@@ -8,9 +8,15 @@ h1 {
     color: aquamarine;
     margin: 0;
     padding: 10px 0;
-    text-shadow: 3px 3px 0px crimson;
+    text-shadow: -3px -3px 0 blue;
     font-size: 40px;
     text-align: center;
+    letter-spacing: 5px;
+}
+
+#lastNameLetter {
+    color: crimson;
+    text-shadow: -3px -3px 0 blue;
 }
   
 p, li {
