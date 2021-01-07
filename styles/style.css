@@ -14,7 +14,7 @@ h1 {
     letter-spacing: 5px;
 }
 
-#lastNameLetter {
+.lastNameLetter {
     color: crimson;
     text-shadow: -3px -3px 0 blue;
 }
