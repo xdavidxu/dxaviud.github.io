@@ -12,12 +12,12 @@ const image = document.querySelector("img");
 const figureCaption = document.querySelector("figcaption");
 image.onclick = function() {
     const src = image.getAttribute("src");
-    if (src === "images/cat1.png") {
-        image.setAttribute("src", "images/cat2.jpg");
-        figureCaption.textContent = "Also from icatcare.org";
+    if (src === "https://via.placeholder.com/1200x600") {
+        image.setAttribute("src", "https://via.placeholder.com/1200x800");
+        figureCaption.textContent = "Another placeholder image";
     } else {
-        image.setAttribute("src", "images/cat1.png");
-        figureCaption.textContent = "From icatcare.org";
+        image.setAttribute("src", "https://via.placeholder.com/1200x600");
+        figureCaption.textContent = "Placeholder image";
     }
 }
 
