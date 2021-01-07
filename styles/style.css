@@ -59,6 +59,8 @@ th, td {
 iframe {
     display: block;
     margin: auto;
+    border: none;
+    border-width: 0;
 }
 
 figcaption {

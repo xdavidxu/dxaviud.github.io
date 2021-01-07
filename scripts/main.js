@@ -35,3 +35,6 @@ const button = document.querySelector("button");
 button.onclick = function() {
     setUserName();
 }
+
+const iframe = document.querySelector("iframe");
+iframe.setAttribute("src", "https://www.youtube.com/embed/GwaRztMaoY0");
