@@ -65,19 +65,50 @@
             </ol>
     
             <table>
-                <tr>
-                    <th colspan="2">First table header</th>
-                    <th>Second table header</th>
-                    <th>Third table header</th>
-                    <th>Fourth table header</th>
-                </tr>
-                <tr>
-                    <td>Data 1 in second row</td>
-                    <td>Data 1.1 in second row</td>
-                    <td>Data 2 in second row</td>
-                    <td>Data 3 in second row</td>
-                    <td>Data 4 in second row</td>
-                </tr>
+                <caption>This table is literally useless.</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" scope="col">First table header</th>
+                        <th scope="col">Second table header</th>
+                        <th scope="col">Third table header</th>
+                        <th scope="col">Fourth table header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1 in second row</td>
+                        <td>Data 1.1 in second row</td>
+                        <td>Data 2 in second row</td>
+                        <td>Data 3 in second row</td>
+                        <td>Data 4 in second row</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="3">3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>4</td>
+                        <td rowspan="2">4</td>
+                        <td>4</td>
+                        <td rowspan="2">4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+                </tfoot>
+                    <tr>
+                        <td>foot</td>
+                        <td>foot</td>
+                        <td>foot</td>
+                        <td>foot</td>
+                        <td>foot</td>
+                    </tr>
+                <tfoot>
             </table>
     
             <p>This is <strong>stronk</strong>.</p>
