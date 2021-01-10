@@ -43,8 +43,7 @@ img {
 hr {
     border: none;
     height: 2px;
-    color: black;
-    background-color: black;
+    background-color: white;
 }
 
 table {
