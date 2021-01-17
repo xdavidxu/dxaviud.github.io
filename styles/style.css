@@ -67,6 +67,10 @@ figcaption {
     padding-top: 10px;
 }
 
+a:link {
+    color: skyblue;
+}
+
 a:hover {
     text-decoration: none;
 }
