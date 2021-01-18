@@ -33,6 +33,23 @@ h1 {
     letter-spacing: 5px;
 }
 
+h2 {
+    font-size: xx-large;
+}
+
+.welcome {
+    background-image: url("../images/welcome-background.jpg");
+    background-size: cover;
+    height: 1080px;
+}
+
+.welcome h2 {
+    font-size: 3em;
+    letter-spacing: 0.5em;
+    vertical-align: middle;
+    line-height: 300px;
+}
+
 .lastNameLetter {
     color: darkmagenta;
 }
