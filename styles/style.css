@@ -1,36 +1,45 @@
+:root {
+    --primary-color: rgba(127, 255, 212, 0.75);
+    --overlay-color: rgba(25, 40, 50, 0.85);
+    --background-color: rgba(25, 25, 25, 1);
+    --menu-speed: 0.75s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
 html {
-    background-color: black;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: auto;
+    margin: 0;
+    background-color: var(--background-color);
+    color: white;
     font-size: 18px;
     font-family: "Cambria", Cambria;
+    text-align: center;
 }
 
 h1 {
     color: aquamarine;
     margin: 0;
     padding: 10px 0;
-    text-shadow: -3px -3px 0 blue;
     font-size: 40px;
     text-align: center;
     letter-spacing: 5px;
 }
 
 .lastNameLetter {
-    color: crimson;
-    text-shadow: -3px -3px 0 blue;
+    color: darkmagenta;
 }
   
 p, li {
     line-height: 1.5;
     letter-spacing: 1px;
-}
-
-body {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 20px 40px 20px 40px;
-    color: white;
-    border-left: 10px solid aquamarine;
-    border-right: 10px solid aquamarine;
 }
 
 img {
@@ -40,19 +49,15 @@ img {
     border: 10px solid white;
 }
 
+figcaption {
+    text-align: center;
+    padding-top: 10px;
+}
+
 hr {
     border: none;
     height: 2px;
-    background-color: white;
-}
-
-table {
-    border-spacing: 0;
-}
-
-th, td {
-    border: 1px solid white;
-    padding: 10px;
+    background-color: var(--primary-color);
 }
 
 iframe {
@@ -60,11 +65,6 @@ iframe {
     margin: auto;
     border: none;
     border-width: 0;
-}
-
-figcaption {
-    text-align: center;
-    padding-top: 10px;
 }
 
 a:link {

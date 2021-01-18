@@ -9,19 +9,67 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cambria">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/menu.css">
         
         <script src="scripts/main.js" defer></script>
 
         <title>David Xu</title>
     </head>
     <body>
-
+        
         <header>
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#contact" class="contact">Contact</a></li>
+                                <li><a href="resume/resume.pdf" target="_blank">Resume</a></li>
+                                <li><a href="https://www.linkedin.com/in/dxaviud" target="_blank">LinkedIn</a></li>
+                                <li><a href="https://github.com/dxaviud" target="_blank">GitHub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h1 id="top">D<span class="lastNameLetter">x</span>avi<span class="lastNameLetter">u</span>d</h1>
         </header>
 
         <main>
-            <h2>Contact</h2>
+            
+            <section class="welcome">
+
+            </section>
+
+            <hr>
+
+            <section class="about">
+
+            </section>
+    
+            <hr>
+
+            <section class="random">
+                <p>Below is an embedded YouTube video.</p>
+          
+                <iframe width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+                <figure>
+                    <img src="https://via.placeholder.com/1200x600">
+                    <figcaption>Placeholder image (click to change)</figcaption>
+                </figure>
+
+                <p>Use the button below to change the h1 element content.</p>
+
+                <button>Change Name</button>
+            </section>
+        </main>
+
+        <footer>
+            <h2 id="contact">Contact</h2>
             <address>
                 <p>
                     Preferred: d83xu@uwaterloo.ca
@@ -29,81 +77,6 @@
                     Alternative: dxaviud@gmail.com
                 </p>
             </address>
-            <h2>Links</h2>
-            <ul>
-                <li>My <a href="resume/resume.pdf" target="_blank">resume</a></li>
-                <li>My <a href="https://www.linkedin.com/in/dxaviud" target="_blank">LinkedIn</a></li>
-                <li>My <a href="https://github.com/dxaviud" target="_blank">GitHub</a></li>
-                <li>Site <a href="https://github.com/dxaviud/dxaviud.github.io" target="_blank">source code</a></li>
-                <li><a href="#bottom">Go to bottom</a></li> 
-            </ul>
-    
-            <hr>
-    
-            <p>Below is an embedded YouTube video.</p>
-          
-            <iframe width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          
-            <figure>
-                <img src="https://via.placeholder.com/1200x600">
-                <figcaption>Placeholder image (click to change)</figcaption>
-            </figure>
-    
-            <table>
-                <caption>This table is useless.</caption>
-                <thead>
-                    <tr>
-                        <th colspan="2" scope="col">First table header</th>
-                        <th scope="col">Second table header</th>
-                        <th scope="col">Third table header</th>
-                        <th scope="col">Fourth table header</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Data 1 in second row</td>
-                        <td>Data 1.1 in second row</td>
-                        <td>Data 2 in second row</td>
-                        <td>Data 3 in second row</td>
-                        <td>Data 4 in second row</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td colspan="3">3</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>4</td>
-                        <td rowspan="2">4</td>
-                        <td>4</td>
-                        <td rowspan="2">4</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>foot</td>
-                        <td>foot</td>
-                        <td>foot</td>
-                        <td>foot</td>
-                        <td>foot</td>
-                    </tr>
-                </tfoot>
-            </table>
-
-            <p>Use the button below to change the h1 element content.</p>
-
-            <button>Change Name</button>
-    
-            <p><a href="#top" id="bottom">Go to top</a></p>
-        </main>
-
-        <footer>
         </footer>
 
     </body>
