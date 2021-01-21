@@ -1,12 +1,15 @@
 console.log("Hello World!");
 
 const heading = document.querySelector("h1");
-// if (!localStorage.getItem("name")) {
-//     setUserName();
-// } else {
-//     let storedName = localStorage.getItem("name");
-//     myHeading.textContent = storedName;
-// }
+
+function setName() {
+    const name = prompt("Please enter your name.");
+    if (!name) {
+        setName();
+    } else {
+        heading.textContent = name;
+    }
+}
 
 const image = document.querySelector("img");
 const figureCaption = document.querySelector("figcaption");
@@ -21,20 +24,10 @@ image.onclick = function() {
     }
 }
 
-function setUserName() {
-    const userName = prompt("Please enter your name.");
-    if (!userName) {
-        setUserName();
-    } else {
-        localStorage.setItem("name", userName);
-        heading.textContent = userName;
-    }
-}
+const iframe = document.querySelector("iframe");
+iframe.setAttribute("src", "https://www.youtube.com/embed/GwaRztMaoY0");
 
 const button = document.querySelector("button");
 button.onclick = function() {
-    setUserName();
+    setName();
 }
-
-const iframe = document.querySelector("iframe");
-iframe.setAttribute("src", "https://www.youtube.com/embed/GwaRztMaoY0");
