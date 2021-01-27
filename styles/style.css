@@ -40,9 +40,20 @@ h1 {
     letter-spacing: 5px;
 }
 
+section {
+    overflow: hidden;
+}
+
 h2 {
     font-size: 50px;
     padding-top: 20px;
+    transition: 0.4s ease;
+    transform: scale(1);
+}
+
+h2:hover {
+    transition: 0.4s ease;
+    transform: scale(1.2);
 }
 
 .welcome {
