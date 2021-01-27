@@ -17,8 +17,9 @@ html {
 
 header {
     padding-top: 20px;
-    height: 60px;
-    margin-bottom: 40px;
+    height: 80px;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 body {
@@ -38,6 +39,12 @@ h1 {
     font-size: 60px;
     text-align: center;
     letter-spacing: 5px;
+    transition: 0.4s ease;
+}
+
+h1:hover {
+    transition: 0.4s ease;
+    transform: scale(1.2);
 }
 
 section {
@@ -48,7 +55,6 @@ h2 {
     font-size: 50px;
     padding-top: 20px;
     transition: 0.4s ease;
-    transform: scale(1);
 }
 
 h2:hover {
@@ -64,12 +70,6 @@ h2:hover {
     overflow: hidden;
 }
 
-.welcome:hover h2 {
-    transition: all 0.4s ease;
-    transform: scale(2);
-    opacity: 1;
-}
-
 .welcome h2 {
     font-size: 3em;
     letter-spacing: 0.25em;
@@ -77,8 +77,13 @@ h2:hover {
     line-height: 500px;
     font-weight: 900;
     transition: all 0.4s ease;
-    transform: scale(1);
     opacity: 0;
+}
+
+.welcome:hover h2 {
+    transition: all 0.8s ease;
+    transform: scale(2);
+    opacity: 1;
 }
 
 .lastNameLetter {
