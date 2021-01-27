@@ -18,11 +18,12 @@
 
 .menu-wrap .hamburger {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 7px;
+    left: 7px;
     z-index: 1;
     width: 60px;
     height: 60px;
+    border-radius: 15px;
     padding: 1rem;
     background: aquamarine;
     display: flex;
