@@ -24,7 +24,7 @@ image.onclick = function() {
 }
 
 const iframe = document.querySelector("iframe");
-iframe.setAttribute("src", "https://www.youtube.com/embed/GwaRztMaoY0");
+iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/Wni78jvgGao?mute=1");
 
 const changeNameButton = document.getElementById("change-name");
 changeNameButton.onclick = function() {
