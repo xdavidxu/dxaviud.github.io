@@ -160,3 +160,7 @@ a:hover {
     font-size: 25px;
     margin-top: 15px;
 }
+
+#contact {
+    height: 300px;
+}
