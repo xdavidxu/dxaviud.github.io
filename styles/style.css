@@ -17,7 +17,7 @@ html {
 
 header {
     padding-top: 20px;
-    height: 80px;
+    height: 85px;
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -42,24 +42,32 @@ h1 {
     transition: 0.4s ease;
 }
 
-h1:hover {
-    transition: 0.4s ease;
-    transform: scale(1.2);
-}
-
-section {
-    overflow: hidden;
-}
-
 h2 {
     font-size: 50px;
     padding-top: 20px;
     transition: 0.4s ease;
 }
 
-h2:hover {
+h3 {
+    font-size: 40px;
+    transition: 0.4s ease;
+}
+
+h3 a:link {
+    color: aquamarine;
+}
+
+h3 a:visited {
+    color: aquamarine;
+}
+
+h1:hover, h2:hover, h3:hover {
     transition: 0.4s ease;
     transform: scale(1.2);
+}
+
+section {
+    overflow: hidden;
 }
 
 .welcome {
@@ -135,4 +143,20 @@ a:link {
 
 a:hover {
     text-decoration: none;
+}
+
+.chessSlides {
+    margin: 0 auto; 
+    width: 600px;
+}
+
+.chessSlidesDiv {
+    padding-bottom: 50px;
+}
+
+.chessButton {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 15px;
 }

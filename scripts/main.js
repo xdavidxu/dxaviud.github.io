@@ -27,7 +27,27 @@ image.onclick = function() {
 const iframe = document.querySelector("iframe");
 iframe.setAttribute("src", "https://www.youtube.com/embed/GwaRztMaoY0");
 
-const button = document.querySelector("button");
-button.onclick = function() {
+const changeNameButton = document.getElementById("change-name");
+changeNameButton.onclick = function() {
     setName();
+}
+
+var slideIndex = 0;
+showVideo(slideIndex);
+
+function changeVideo(n) {
+  showVideo(slideIndex += n);
+}
+
+function showVideo(n) {
+    var i;
+    var slides = document.getElementsByClassName("chessSlides");
+    var title = document.getElementById("chessSlideTitle");
+    if (n > slides.length - 1) {slideIndex = 0}
+    if (n < 0) {slideIndex = slides.length - 1};
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+    title.textContent = slides[slideIndex].textContent;
 }
