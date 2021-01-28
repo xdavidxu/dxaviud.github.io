@@ -15,6 +15,7 @@ function showVideo(n) {
     if (n < 0) {slideIndex = slides.length - 1};
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        slides[i].pause();
     }
     slides[slideIndex].style.display = "block";
     title.textContent = slides[slideIndex].textContent;
