@@ -43,6 +43,10 @@ h1 {
     transition: 0.4s ease;
 }
 
+.link-for-h1 {
+    text-decoration: none;
+}
+
 h2 {
     font-size: 50px;
     padding-top: 20px;
