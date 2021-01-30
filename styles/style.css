@@ -119,13 +119,6 @@ p, li {
     letter-spacing: 1px;
 }
 
-img {
-    display: block;
-    margin: auto;
-    width: 600px;
-    border: 10px solid white;
-}
-
 figcaption {
     text-align: center;
     padding-top: 10px;
@@ -175,6 +168,11 @@ a:hover {
     height: 40px;
     font-size: 25px;
     margin-top: 15px;
+}
+
+.adderImagesDiv img {
+    vertical-align: top;
+    margin: 10px;
 }
 
 #contact {
