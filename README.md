@@ -1,3 +1,3 @@
 # dxaviud.github.io
 
-My first website. Still messing around with stuff.
+This is the source code for my ***[personal website](https://dxaviud.github.io/)***.
