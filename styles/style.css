@@ -1,5 +1,6 @@
 :root {
-    --primary-color: rgba(127, 255, 212, 0.75);
+    /* --primary-color: aquamarine; */
+    --primary-color: #0395DE;
     --overlay-color: rgba(25, 40, 50, 0.85);
     --background-color: rgba(25, 25, 25, 1);
     --menu-speed: 0.75s;
@@ -33,7 +34,7 @@ body {
 }
 
 h1 {
-    color: aquamarine;
+    color: var(--primary-color);
     margin: 0;
     padding: 0;
     font-size: 60px;
@@ -54,11 +55,11 @@ h3 {
 }
 
 h3 a:link {
-    color: aquamarine;
+    color: var(--primary-color);
 }
 
 h3 a:visited {
-    color: aquamarine;
+    color: var(--primary-color);
 }
 
 h1:hover, h2:hover, h3:hover {
