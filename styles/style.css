@@ -184,6 +184,10 @@ a:hover {
     height: auto;
 }
 
+#contact img {
+    margin: 45px;
+}
+
 .logo {
     width: 100px;
     height: 100px;
