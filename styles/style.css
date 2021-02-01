@@ -112,6 +112,11 @@ section {
     text-align: center;
     max-width: 1000px;
     margin: auto;
+    margin-bottom: 45px;
+}
+
+#projects p {
+    margin-bottom: 45px;
 }
 
 p, li {
