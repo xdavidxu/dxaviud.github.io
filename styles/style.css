@@ -170,6 +170,11 @@ a:hover {
     margin-top: 15px;
 }
 
+.connectFourImagesDiv img {
+    vertical-align: top;
+    margin: 10px;
+}
+
 .adderImagesDiv img {
     vertical-align: top;
     margin: 10px;
