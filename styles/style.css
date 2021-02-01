@@ -184,14 +184,18 @@ a:hover {
     height: auto;
 }
 
-.email-logo {
+.logo {
     width: 100px;
     height: 100px;
     border: none;
     transition: 0.6s ease;
 }
 
-.email-logo:hover {
+.logo:hover {
     transition: 0.6s ease;
     transform: rotate(360deg);
+}
+
+footer img {
+    margin: 40px;
 }
