@@ -180,6 +180,11 @@ a:hover {
     margin: 10px;
 }
 
+.tttImagesDiv img {
+    vertical-align: top;
+    margin: 10px;
+}
+
 .adderImagesDiv img {
     vertical-align: top;
     margin: 10px;
