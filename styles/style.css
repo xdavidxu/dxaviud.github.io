@@ -217,3 +217,11 @@ a:hover {
 #links img {
     margin: 45px;
 }
+
+.hide {
+    opacity: 0;
+}
+
+.hide:hover {
+    opacity: 1;
+}
