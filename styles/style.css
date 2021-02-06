@@ -175,6 +175,11 @@ a:hover {
     margin-top: 15px;
 }
 
+.tetrisImagesDiv img {
+    vertical-align: top;
+    margin: 10px;
+}
+
 .connectFourImagesDiv img {
     vertical-align: top;
     margin: 10px;
