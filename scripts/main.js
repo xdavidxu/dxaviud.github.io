@@ -9,8 +9,8 @@ function changeVideo(n) {
 
 function showVideo(n) {
     var i;
-    var slides = document.getElementsByClassName("chessSlides");
-    var title = document.getElementById("chessSlideTitle");
+    var slides = document.getElementsByClassName("chess-slide-video");
+    var title = document.getElementById("chess-slide-title");
     if (n > slides.length - 1) {slideIndex = 0}
     if (n < 0) {slideIndex = slides.length - 1};
     for (i = 0; i < slides.length; i++) {
