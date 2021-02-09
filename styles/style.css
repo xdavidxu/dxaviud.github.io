@@ -179,27 +179,27 @@ a:hover {
     margin-top: 15px;
 }
 
-.tetrisImagesDiv img {
+.tetris-div img {
     vertical-align: top;
     margin: 10px;
 }
 
-.connectFourImagesDiv img {
+.connect-four-div img {
     vertical-align: top;
     margin: 10px;
 }
 
-.tttImagesDiv img {
+.ttt-div img {
     vertical-align: top;
     margin: 10px;
 }
 
-.adderImagesDiv img {
+.adder-div img {
     vertical-align: top;
     margin: 10px;
 }
 
-.teleprinterImagesDiv img {
+.tps-div img {
     max-width: 800px;
 }
 
