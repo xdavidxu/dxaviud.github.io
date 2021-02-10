@@ -164,7 +164,7 @@ a:hover {
     text-decoration: none;
 }
 
-.chess-div {
+.chess {
     margin: 10px;
 }
 
@@ -173,7 +173,7 @@ a:hover {
     width: 600px;
 }
 
-.chess-slides-div {
+.chess-slides {
     padding-bottom: 50px;
 }
 
