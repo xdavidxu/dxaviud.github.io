@@ -184,14 +184,14 @@ a:hover {
     margin-top: 15px;
 }
 
-.tetris-div {
+.tetris {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
 
-.tetris-div img {
+.tetris img {
     margin: 10px;
 }
 
@@ -199,22 +199,22 @@ a:hover {
     vertical-align: top;
 }
 
-.connect-four-div img {
+.connect-four img {
     vertical-align: top;
     margin: 10px;
 }
 
-.ttt-div img {
+.ttt img {
     vertical-align: top;
     margin: 10px;
 }
 
-.adder-div img {
+.adder img {
     vertical-align: top;
     margin: 10px;
 }
 
-.tps-div img {
+.tps img {
     max-width: 800px;
 }
 
