@@ -81,6 +81,7 @@ section {
 
 .welcome {
     background-image: url("../images/welcome-background.jpg");
+    background-position: center;
     background-size: cover;
     height: 1080px;
     margin-bottom: 50px;
