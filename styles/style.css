@@ -5,6 +5,7 @@
     --background-color: rgba(25, 25, 25, 1);
     --menu-speed: 0.75s;
     --top-and-left: 20px;
+    --primary-width: 600px;
 }
 
 * {
@@ -62,11 +63,7 @@ h3 {
     transition: 0.4s ease;
 }
 
-h3 a:link {
-    color: var(--primary-color);
-}
-
-h3 a:visited {
+h3 a:link, h3 a:visited {
     color: var(--primary-color);
 }
 
@@ -156,10 +153,6 @@ footer {
     height: 100px;
 }
 
-a:link {
-    color: skyblue;
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -168,9 +161,13 @@ a:hover {
     margin: 10px;
 }
 
+.chess img {
+    width: var(--primary-width);
+}
+
 .chess-slide-video {
     margin: 0 auto; 
-    width: 600px;
+    max-width: var(--primary-width);
 }
 
 .chess-slides {
@@ -182,6 +179,10 @@ a:hover {
     height: 40px;
     font-size: 25px;
     margin-top: 15px;
+}
+
+.uttt img {
+    width: var(--primary-width);
 }
 
 .tetris {
@@ -248,4 +249,12 @@ a:hover {
 
 .hide:hover {
     opacity: 1;
+}
+
+@media (max-width: 600px) { /*600px is --primary-width*/
+    .chess img, 
+    .chess-slide-video,
+    .uttt img {
+        width: 100%;
+    }
 }
