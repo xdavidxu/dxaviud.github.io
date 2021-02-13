@@ -121,6 +121,10 @@ section {
     margin-bottom: 45px;
 }
 
+section#projects {
+    padding-bottom: 80px;
+}
+
 #projects p {
     margin-bottom: 45px;
 }
@@ -212,6 +216,11 @@ a:hover {
 
 .tps img {
     max-width: 800px;
+}
+
+.coming-soon {
+    font-size: 1.5em;
+    margin-top: 80px;
 }
 
 #contact {
