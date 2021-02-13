@@ -142,8 +142,10 @@ figcaption {
 
 hr {
     border: none;
-    height: 20px;
+    height: 10px;
+    width: 50%;
     background-color: var(--primary-color);
+    border-radius: 5px;
 }
 
 iframe {
