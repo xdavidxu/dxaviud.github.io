@@ -84,6 +84,7 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     height: 1400px;
     margin-bottom: 50px;
     overflow: hidden;
