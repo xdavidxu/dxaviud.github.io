@@ -80,12 +80,15 @@ section {
 }
 
 .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url("../images/default-background.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 1400px;
+    height: 1080px;
     margin-bottom: 50px;
     overflow: hidden;
 }
@@ -94,7 +97,6 @@ section {
     font-size: 3em;
     letter-spacing: 0.25em;
     vertical-align: middle;
-    line-height: 500px;
     font-weight: 900;
     transition: all 0.4s ease;
     opacity: 0;
