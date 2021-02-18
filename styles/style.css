@@ -291,6 +291,7 @@ a:hover {
     border-color: black;
     border-width: 3px;
     border-style: solid;
+    cursor: pointer;
 }
 
 .circle.default-theme {
