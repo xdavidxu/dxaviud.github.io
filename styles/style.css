@@ -281,3 +281,41 @@ a:hover {
         font-size: 1.3em;
     }
 }
+
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.circle.default-theme {
+    background-color: #0395DE;
+}
+
+.circle.aquamarine-theme {
+    background-color: aquamarine;
+}
+
+.circle.crimson-theme {
+    background-color: crimson;
+}
+
+.circle.gold-theme {
+    background-color: gold;
+}
+
+.theme-picker {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+.theme-picker ul li {
+    list-style: none;
+    padding: 5px;
+}

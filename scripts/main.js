@@ -26,3 +26,26 @@ const toggler = document.getElementsByClassName("toggler");
 function closeHamburger() {
     toggler[0].click();
 }
+
+let circles = document.getElementsByClassName("circle");
+let themeColor = document.getElementById("theme-color");
+
+for (let i = 0; i < circles.length; i++) {
+    circles[i].addEventListener("click", function() {
+        console.log("clicked circle!");
+        let theme = this.dataset.theme;
+        changeTheme(theme);
+    });
+}
+
+function changeTheme(theme) {
+    if (theme == "default") {
+        themeColor.href = "";
+    } else if (theme == "aquamarine") {
+        themeColor.href = "styles/aquamarine.css";
+    } else if (theme == "crimson") {
+        themeColor.href = "styles/crimson.css";
+    } else if (theme == "gold") {
+        themeColor.href = "styles/gold.css";
+    }
+}
