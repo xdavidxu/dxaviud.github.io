@@ -28,7 +28,6 @@ function closeHamburger() {
 }
 
 let circles = document.getElementsByClassName("circle");
-let themeColor = document.getElementById("theme-color");
 
 for (let i = 0; i < circles.length; i++) {
     circles[i].addEventListener("click", function() {
@@ -38,14 +37,21 @@ for (let i = 0; i < circles.length; i++) {
     });
 }
 
+let themeColor = document.getElementById("theme-color");
+let welcome = document.getElementsByClassName("welcome");
+
 function changeTheme(theme) {
     if (theme == "default") {
         themeColor.href = "";
+        welcome[0].style.backgroundImage = 'url("../images/default-background.jpg")';
     } else if (theme == "aquamarine") {
         themeColor.href = "styles/aquamarine.css";
+        welcome[0].style.backgroundImage = 'url("../images/aquamarine-background.jpg")';
     } else if (theme == "crimson") {
         themeColor.href = "styles/crimson.css";
+        welcome[0].style.backgroundImage = 'url("../images/crimson-background.jpg")';
     } else if (theme == "gold") {
         themeColor.href = "styles/gold.css";
+        welcome[0].style.backgroundImage = 'url("../images/gold-background.jpg")';
     }
 }
