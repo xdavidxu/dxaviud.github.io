@@ -73,11 +73,5 @@ function normalizeCircle(index) {
     circles[index].style.width = `${CIRCLE_SIZE}px`;
     circles[index].style.height = `${CIRCLE_SIZE}px`;
 }
-// function makeCirclesNormalSize() {
-//     for (let i = 0; i < circles.length; i++) {
-//         circles[i].style.width = `${CIRCLE_SIZE}px`;
-//         circles[i].style.height = `${CIRCLE_SIZE}px`;
-//     }
-// }
 
 expandCircle(circles[0]);
