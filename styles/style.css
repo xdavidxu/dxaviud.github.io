@@ -74,7 +74,6 @@ h3 a:visited {
     color: var(--primary-color);
 }
 
-h1:hover,
 h2:hover,
 h3:hover {
     transition: 0.4s ease;
