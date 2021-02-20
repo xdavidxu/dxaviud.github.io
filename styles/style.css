@@ -1,6 +1,6 @@
 :root {
     /* --primary-color: aquamarine; */
-    --primary-color: #0395DE;
+    --primary-color: #0395de;
     --overlay-color: rgba(25, 40, 50, 0.85);
     --background-color: rgba(25, 25, 25, 1);
     --menu-speed: 0.75s;
@@ -16,7 +16,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -67,11 +69,14 @@ h3 {
     transition: 0.4s ease;
 }
 
-h3 a:link, h3 a:visited {
+h3 a:link,
+h3 a:visited {
     color: var(--primary-color);
 }
 
-h1:hover, h2:hover, h3:hover {
+h1:hover,
+h2:hover,
+h3:hover {
     transition: 0.4s ease;
     transform: scale(1.2);
 }
@@ -133,7 +138,8 @@ section#projects {
     margin-bottom: 45px;
 }
 
-p, li {
+p,
+li {
     line-height: 1.5;
     letter-spacing: 1px;
 }
@@ -176,7 +182,7 @@ a:hover {
 }
 
 .chess-slide-video {
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .chess-slides {
@@ -263,19 +269,21 @@ a:hover {
 
 .chess img,
 .chess-slide-video,
-.uttt img, 
+.uttt img,
 .gol img,
-.minicanvas img, video,
+.minicanvas img,
+video,
 .tps img {
     width: 600px;
 }
 
 @media (max-width: 600px) {
-    .chess img, 
+    .chess img,
     .chess-slide-video,
     .uttt img,
     .gol img,
-    .minicanvas img, video,
+    .minicanvas img,
+    video,
     .tps img {
         width: 100%;
     }
@@ -301,7 +309,7 @@ a:hover {
 }
 
 .circle.default-theme {
-    background-color: #0395DE;
+    background-color: #0395de;
 }
 
 .circle.aquamarine-theme {
