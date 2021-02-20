@@ -28,14 +28,17 @@ function closeHamburger() {
 }
 
 let circles = document.getElementsByClassName("circle");
+let currentCircleIndex = 0;
 
 for (let i = 0; i < circles.length; i++) {
     circles[i].addEventListener("click", function() {
         console.log("clicked circle!");
         let theme = this.dataset.theme;
         changeTheme(theme);
-        makeCirclesNormalSize();
+        // makeCirclesNormalSize();
         expandCircle(this);
+        normalizeCircle(currentCircleIndex);
+        currentCircleIndex = i;
     });
 }
 
@@ -66,9 +69,15 @@ function expandCircle(circle) {
     circle.style.height = `${CIRCLE_SIZE*SCALE_FACTOR}px`;
 }
 
-function makeCirclesNormalSize() {
-    for (let i = 0; i < circles.length; i++) {
-        circles[i].style.width = `${CIRCLE_SIZE}px`;
-        circles[i].style.height = `${CIRCLE_SIZE}px`;
-    }
+function normalizeCircle(index) {
+    circles[index].style.width = `${CIRCLE_SIZE}px`;
+    circles[index].style.height = `${CIRCLE_SIZE}px`;
 }
+// function makeCirclesNormalSize() {
+//     for (let i = 0; i < circles.length; i++) {
+//         circles[i].style.width = `${CIRCLE_SIZE}px`;
+//         circles[i].style.height = `${CIRCLE_SIZE}px`;
+//     }
+// }
+
+expandCircle(circles[0]);
