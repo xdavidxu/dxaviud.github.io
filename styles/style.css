@@ -318,12 +318,10 @@ a:hover {
 .theme-picker {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 10px;
     right: 10px;
-}
-
-.theme-picker ul li {
-    list-style: none;
-    padding: 5px;
+    height: 150px;
+    width: 40px;
 }

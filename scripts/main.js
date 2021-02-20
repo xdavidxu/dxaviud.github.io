@@ -34,6 +34,8 @@ for (let i = 0; i < circles.length; i++) {
         console.log("clicked circle!");
         let theme = this.dataset.theme;
         changeTheme(theme);
+        makeCirclesNormalSize();
+        expandCircle(this);
     });
 }
 
@@ -53,5 +55,20 @@ function changeTheme(theme) {
     } else if (theme == "gold") {
         themeColor.href = "styles/gold.css";
         welcome[0].style.backgroundImage = 'url("../images/gold-background.jpg")';
+    }
+}
+
+const SCALE_FACTOR = 1.2;
+const CIRCLE_SIZE = 25;
+
+function expandCircle(circle) {
+    circle.style.width = `${CIRCLE_SIZE*SCALE_FACTOR}px`;
+    circle.style.height = `${CIRCLE_SIZE*SCALE_FACTOR}px`;
+}
+
+function makeCirclesNormalSize() {
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].style.width = `${CIRCLE_SIZE}px`;
+        circles[i].style.height = `${CIRCLE_SIZE}px`;
     }
 }
