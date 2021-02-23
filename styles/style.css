@@ -120,7 +120,7 @@ section {
 }
 
 #about {
-    margin-bottom: 20px;
+    margin: 25px;
 }
 
 #about p {
@@ -291,6 +291,14 @@ video,
 
     .welcome h2 {
         font-size: 1.3em;
+    }
+
+    #about p {
+        font-size: large;
+    }
+
+    hr {
+        height: 5px;
     }
 }
 
