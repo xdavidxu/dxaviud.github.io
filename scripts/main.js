@@ -32,7 +32,6 @@ function closeHamburger() {
 }
 
 let circles = document.getElementsByClassName("circle");
-localStorage.circleIndex = null;
 
 for (let i = 0; i < circles.length; i++) {
     circles[i].addEventListener("click", function () {
@@ -81,9 +80,11 @@ function normalizeCircle(index) {
     circles[index].style.height = `${CIRCLE_SIZE}px`;
 }
 
-if (localStorage.circleIndex === null) {
+if ("circleIndex" in localStorage) {
     expandCircle(circles[localStorage.circleIndex]);
+    changeTheme(circles[localStorage.circleIndex].dataset.theme);
 } else {
     expandCircle(circles[0]);
+    changeTheme(circles[0].dataset.theme);
     localStorage.circleIndex = 0;
 }
