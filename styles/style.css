@@ -300,6 +300,14 @@ video,
     hr {
         height: 5px;
     }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
 }
 
 .circle {
