@@ -4,7 +4,7 @@ var slideIndex = 0;
 showVideo(slideIndex);
 
 function changeVideo(n) {
-    showVideo(slideIndex += n);
+    showVideo((slideIndex += n));
 }
 
 function showVideo(n) {
@@ -87,4 +87,3 @@ if (localStorage.circleIndex === null) {
     expandCircle(circles[0]);
     localStorage.circleIndex = 0;
 }
-
