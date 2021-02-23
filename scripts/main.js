@@ -32,17 +32,16 @@ function closeHamburger() {
 }
 
 let circles = document.getElementsByClassName("circle");
-let currentCircleIndex = 0;
+localStorage.circleIndex = null;
 
 for (let i = 0; i < circles.length; i++) {
     circles[i].addEventListener("click", function () {
         console.log("clicked circle!");
         let theme = this.dataset.theme;
         changeTheme(theme);
-        // makeCirclesNormalSize();
         expandCircle(this);
-        normalizeCircle(currentCircleIndex);
-        currentCircleIndex = i;
+        normalizeCircle(localStorage.circleIndex);
+        localStorage.circleIndex = i;
     });
 }
 
@@ -82,4 +81,10 @@ function normalizeCircle(index) {
     circles[index].style.height = `${CIRCLE_SIZE}px`;
 }
 
-expandCircle(circles[0]);
+if (localStorage.circleIndex === null) {
+    expandCircle(circles[localStorage.circleIndex]);
+} else {
+    expandCircle(circles[0]);
+    localStorage.circleIndex = 0;
+}
+
