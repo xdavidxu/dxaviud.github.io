@@ -1,3 +1,9 @@
+const toggler = document.querySelector(".toggler");
+
+function closeHamburger() {
+    toggler.click();
+}
+
 var slideIndex = 0;
 var slides = document.getElementsByClassName("chess-slide-video");
 showVideo();
@@ -24,12 +30,6 @@ function showVideo() {
 
     let title = document.getElementById("chess-slide-title");
     title.textContent = slides[slideIndex].textContent;
-}
-
-const toggler = document.getElementsByClassName("toggler");
-
-function closeHamburger() {
-    toggler[0].click();
 }
 
 let circles = document.getElementsByClassName("circle");
