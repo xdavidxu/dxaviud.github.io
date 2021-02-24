@@ -14,6 +14,15 @@ let slideIndex = 0;
 let slides = document.getElementsByClassName("chess-slide-video");
 showVideo();
 
+let leftButton = document.querySelector(".chess-slides-button.left");
+let rightButton = document.querySelector(".chess-slides-button.right");
+leftButton.addEventListener("click", function () {
+    changeVideo(-1)
+});
+rightButton.addEventListener("click", function () {
+    changeVideo(+1)
+});
+
 function changeVideo(delta) {
     if (Math.abs(delta) != 1) {
         throw "Error: delta not 1 or -1";
