@@ -1,5 +1,3 @@
-console.log("Hello World!");
-
 var slideIndex = 0;
 showVideo(slideIndex);
 
