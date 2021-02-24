@@ -1,7 +1,11 @@
 const toggler = document.querySelector(".toggler");
 
-function closeHamburger() {
-    toggler.click();
+let menuItems = document.getElementsByClassName("untoggle");
+
+for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", function() {
+        toggler.click();
+    })
 }
 
 var slideIndex = 0;
