@@ -10,8 +10,8 @@ for (let i = 0; i < menuItems.length; i++) {
 }
 
 // Chess demo slides
-var slideIndex = 0;
-var slides = document.getElementsByClassName("chess-slide-video");
+let slideIndex = 0;
+let slides = document.getElementsByClassName("chess-slide-video");
 showVideo();
 
 function changeVideo(delta) {
@@ -43,7 +43,6 @@ let circles = document.getElementsByClassName("circle");
 
 for (let i = 0; i < circles.length; i++) {
     circles[i].addEventListener("click", function () {
-        console.log("clicked circle!");
         let theme = this.dataset.theme;
         changeTheme(theme);
         expandCircle(this);
@@ -53,24 +52,24 @@ for (let i = 0; i < circles.length; i++) {
 }
 
 let themeColor = document.getElementById("theme-color");
-let welcome = document.getElementsByClassName("welcome");
+let welcome = document.querySelector(".welcome");
 
 function changeTheme(theme) {
     if (theme == "default") {
         themeColor.href = "";
-        welcome[0].style.backgroundImage =
+        welcome.style.backgroundImage =
             'url("../images/default-background.jpg")';
     } else if (theme == "aquamarine") {
         themeColor.href = "styles/aquamarine.css";
-        welcome[0].style.backgroundImage =
+        welcome.style.backgroundImage =
             'url("../images/aquamarine-background.jpg")';
     } else if (theme == "crimson") {
         themeColor.href = "styles/crimson.css";
-        welcome[0].style.backgroundImage =
+        welcome.style.backgroundImage =
             'url("../images/crimson-background.jpg")';
     } else if (theme == "gold") {
         themeColor.href = "styles/gold.css";
-        welcome[0].style.backgroundImage =
+        welcome.style.backgroundImage =
             'url("../images/gold-background.jpg")';
     }
 }
