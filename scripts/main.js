@@ -6,20 +6,20 @@ function changeVideo(n) {
 }
 
 function showVideo(n) {
-    var i;
-    var slides = document.getElementsByClassName("chess-slide-video");
-    var title = document.getElementById("chess-slide-title");
+    let slides = document.getElementsByClassName("chess-slide-video");
     if (n > slides.length - 1) {
         slideIndex = 0;
     }
     if (n < 0) {
         slideIndex = slides.length - 1;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         slides[i].pause();
     }
     slides[slideIndex].style.display = "block";
+
+    let title = document.getElementById("chess-slide-title");
     title.textContent = slides[slideIndex].textContent;
 }
 
