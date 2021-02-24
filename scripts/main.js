@@ -1,18 +1,21 @@
 var slideIndex = 0;
-showVideo(slideIndex);
+var slides = document.getElementsByClassName("chess-slide-video");
+showVideo();
 
-function changeVideo(n) {
-    showVideo((slideIndex += n));
-}
-
-function showVideo(n) {
-    let slides = document.getElementsByClassName("chess-slide-video");
-    if (n > slides.length - 1) {
-        slideIndex = 0;
+function changeVideo(delta) {
+    if (Math.abs(delta) != 1) {
+        throw "Error: delta not 1 or -1";
     }
-    if (n < 0) {
+    slideIndex += delta;
+    if (slideIndex > slides.length - 1) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
         slideIndex = slides.length - 1;
     }
+    showVideo();
+}
+
+function showVideo() {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         slides[i].pause();
