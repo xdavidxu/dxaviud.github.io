@@ -1,13 +1,15 @@
+// Hamburger menu
 const toggler = document.querySelector(".toggler");
 
 let menuItems = document.getElementsByClassName("untoggle");
 
 for (let i = 0; i < menuItems.length; i++) {
-    menuItems[i].addEventListener("click", function() {
+    menuItems[i].addEventListener("click", function () {
         toggler.click();
-    })
+    });
 }
 
+// Chess demo slides
 var slideIndex = 0;
 var slides = document.getElementsByClassName("chess-slide-video");
 showVideo();
@@ -36,6 +38,7 @@ function showVideo() {
     title.textContent = slides[slideIndex].textContent;
 }
 
+// Theme picker
 let circles = document.getElementsByClassName("circle");
 
 for (let i = 0; i < circles.length; i++) {
