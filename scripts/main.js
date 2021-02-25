@@ -49,10 +49,14 @@ function showVideo() {
 
 // Theme picker
 let circles = document.getElementsByClassName("circle");
+let currentTheme = circles[0].dataset.theme;
 
 for (let i = 0; i < circles.length; i++) {
     circles[i].addEventListener("click", function () {
         let theme = this.dataset.theme;
+        if (theme === currentTheme) {
+            return;
+        }
         changeTheme(theme);
         expandCircle(this);
         normalizeCircle(localStorage.circleIndex);
@@ -64,6 +68,7 @@ let themeColor = document.getElementById("theme-color");
 let welcome = document.querySelector(".welcome");
 
 function changeTheme(theme) {
+    currentTheme = theme;
     if (theme == "default") {
         themeColor.href = "";
         welcome.style.backgroundImage =
