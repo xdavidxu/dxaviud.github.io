@@ -7,13 +7,11 @@ window.onload = function() {
 // Hamburger menu
 const toggler = document.querySelector(".toggler");
 
-let menuItems = document.getElementsByClassName("untoggle");
-
-for (let i = 0; i < menuItems.length; i++) {
-    menuItems[i].addEventListener("click", function () {
-        toggler.click();
-    });
-}
+// this takes advantage of event delegation (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+const menuItemsList = document.querySelector("ul.menu-items-list");
+menuItemsList.addEventListener("click", function () {
+    toggler.click();
+})
 
 // Chess demo slides
 let slideIndex = 0;
