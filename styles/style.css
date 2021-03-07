@@ -145,6 +145,11 @@ li {
     letter-spacing: 1px;
 }
 
+h3 + p {
+    font-size: 20px;
+    font-style: italic;
+}
+
 figcaption {
     text-align: center;
     padding-top: 10px;
