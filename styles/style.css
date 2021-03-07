@@ -148,6 +148,8 @@ li {
 h3 + p {
     font-size: 20px;
     font-style: italic;
+    max-width: 600px;
+    margin: auto;
 }
 
 figcaption {
