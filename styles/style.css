@@ -139,6 +139,10 @@ section#projects {
     margin-bottom: 45px;
 }
 
+#projects img {
+    border-radius: 20px;
+}
+
 p,
 li {
     line-height: 1.5;
