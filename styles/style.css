@@ -214,6 +214,14 @@ a:hover {
     margin-right: 10px;
 }
 
+.chess-slides-button:active {
+    transform: scale(0.9);
+}
+
+.chess-slides-button:focus {
+    outline: none;
+}
+
 .tetris {
     display: flex;
     flex-direction: column;
