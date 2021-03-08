@@ -189,6 +189,10 @@ a:hover {
     margin: 10px;
 }
 
+#demo {
+    font-size: 28px;
+}
+
 .chess-slide-video {
     margin: 0 auto;
 }
