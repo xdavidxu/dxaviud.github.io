@@ -189,6 +189,10 @@ a:hover {
     text-decoration: none;
 }
 
+.arls-slide-img {
+    margin: 0 auto;
+}
+
 .chess {
     margin: 10px;
 }
@@ -205,7 +209,7 @@ a:hover {
     padding-bottom: 50px;
 }
 
-.chess-slides-button {
+.slides-button {
     background-color: var(--primary-color);
     font-weight: bold;
     border-width: 3px;
@@ -218,7 +222,7 @@ a:hover {
     margin-right: 10px;
 }
 
-.chess-slides-button:focus {
+.slides-button:focus {
     outline: none;
 }
 
@@ -309,6 +313,10 @@ a:hover {
     opacity: 1;
 }
 
+.arls-slides img {
+    height: 600px;
+}
+
 .chess img,
 .chess-slide-video,
 .uttt img,
@@ -320,6 +328,11 @@ video,
 }
 
 @media (max-width: 600px) {
+    .arls-slides img {
+        height: auto;
+    }
+
+    .arls-slides img,
     .chess img,
     .chess-slide-video,
     .uttt img,

@@ -13,17 +13,54 @@ menuItemsList.addEventListener("click", function () {
     toggler.click();
 })
 
+// Anti-Rona Lock System slides
+let arlsSlideIndex = 0;
+let arlsSlides = document.getElementsByClassName("arls-slide-img");
+showImage();
+
+let arlsLeftButton = document.querySelector(".arls-slides .slides-button.left");
+let arlsRightButton = document.querySelector(".arls-slides .slides-button.right");
+arlsLeftButton.addEventListener("click", function () {
+    changeImage(-1)
+});
+arlsRightButton.addEventListener("click", function () {
+    changeImage(+1)
+});
+
+function changeImage(delta) {
+    if (Math.abs(delta) != 1) {
+        throw "Error: delta not 1 or -1";
+    }
+    arlsSlideIndex += delta;
+    if (arlsSlideIndex > arlsSlides.length - 1) {
+        arlsSlideIndex = 0;
+    } else if (arlsSlideIndex < 0) {
+        arlsSlideIndex = arlsSlides.length - 1;
+    }
+    showImage();
+}
+
+function showImage() {
+    for (let i = 0; i < arlsSlides.length; i++) {
+        arlsSlides[i].style.display = "none";
+    }
+    arlsSlides[arlsSlideIndex].style.display = "block";
+
+    let arlsTitle = document.getElementById("arls-slide-title");
+    arlsTitle.textContent = arlsSlides[arlsSlideIndex].alt;
+}
+
 // Chess demo slides
-let slideIndex = 0;
-let slides = document.getElementsByClassName("chess-slide-video");
+let chessSlideIndex = 0;
+let chessSlides = document.getElementsByClassName("chess-slide-video");
 showVideo();
 
-let leftButton = document.querySelector(".chess-slides-button.left");
-let rightButton = document.querySelector(".chess-slides-button.right");
-leftButton.addEventListener("click", function () {
+let chessLeftButton = document.querySelector(".chess-slides .slides-button.left");
+let chessRightButton = document.querySelector(".chess-slides .slides-button.right");
+chessLeftButton.addEventListener("click", function () {
     changeVideo(-1)
 });
-rightButton.addEventListener("click", function () {
+chessRightButton.addEventListener("click", function () {
     changeVideo(+1)
 });
 
@@ -31,24 +68,24 @@ function changeVideo(delta) {
     if (Math.abs(delta) != 1) {
         throw "Error: delta not 1 or -1";
     }
-    slideIndex += delta;
-    if (slideIndex > slides.length - 1) {
-        slideIndex = 0;
-    } else if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
+    chessSlideIndex += delta;
+    if (chessSlideIndex > chessSlides.length - 1) {
+        chessSlideIndex = 0;
+    } else if (chessSlideIndex < 0) {
+        chessSlideIndex = chessSlides.length - 1;
     }
     showVideo();
 }
 
 function showVideo() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].pause();
+    for (let i = 0; i < chessSlides.length; i++) {
+        chessSlides[i].style.display = "none";
+        chessSlides[i].pause();
     }
-    slides[slideIndex].style.display = "block";
+    chessSlides[chessSlideIndex].style.display = "block";
 
     let title = document.getElementById("chess-slide-title");
-    title.textContent = slides[slideIndex].textContent;
+    title.textContent = chessSlides[chessSlideIndex].textContent;
 }
 
 // Theme picker
