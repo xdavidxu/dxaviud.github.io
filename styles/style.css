@@ -53,6 +53,7 @@ h1 {
 
 h1 a {
     color: var(--primary-color);
+    transition: 0.6s ease;
 }
 
 .h1-link {
@@ -73,6 +74,7 @@ h3 {
 h3 a:link,
 h3 a:visited {
     color: var(--primary-color);
+    transition: 0.6s ease;
 }
 
 h1:hover,
@@ -98,6 +100,7 @@ section {
     height: 100vh;
     margin-bottom: 50px;
     overflow: hidden;
+    transition: 0.6s ease;
 }
 
 .welcome h2 {
@@ -167,6 +170,7 @@ hr {
     width: 50%;
     background-color: var(--primary-color);
     border-radius: 5px;
+    transition: 0.6s ease;
 }
 
 iframe {
@@ -220,6 +224,7 @@ a:hover {
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    transition: 0.6s ease;
 }
 
 .slides-button:focus {
@@ -274,6 +279,7 @@ a:hover {
 
 .smaller-projects ul li a {
     color: var(--primary-color);
+    transition: 0.6s ease;
 }
 
 .coming-soon {
@@ -294,6 +300,8 @@ a:hover {
     height: 100px;
     border: none;
     transition: 0.6s ease;
+    background-color: var(--primary-color);
+    border-radius: 20px;
 }
 
 .logo:hover {
