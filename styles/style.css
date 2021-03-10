@@ -1,8 +1,8 @@
 :root {
-    /* --primary-color: aquamarine; */
     --primary-color: #0395de;
     --overlay-color: rgba(25, 40, 50, 0.85);
     --background-color: rgba(25, 25, 25, 1);
+    --odd-color: rgba(35, 35, 35, 1);
     --menu-speed: 0.75s;
     --top-and-left: 20px;
 }
@@ -69,6 +69,7 @@ h2 {
 h3 {
     font-size: 40px;
     transition: 0.4s ease;
+    margin-top: 20px;
 }
 
 h3 a:link,
@@ -123,7 +124,8 @@ section {
 }
 
 #about {
-    margin: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 #about p {
@@ -144,6 +146,19 @@ section#projects {
 
 #projects img {
     border-radius: 20px;
+}
+
+#projects > div {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#projects > div.arls {
+    padding-top: 0;
+}
+
+#projects > div:nth-child(odd) {
+    background-color: var(--odd-color);
 }
 
 p,
@@ -198,7 +213,8 @@ a:hover {
 }
 
 .chess {
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #demo {
@@ -222,8 +238,6 @@ a:hover {
     font-size: 25px;
     margin-top: 15px;
     border-radius: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
     transition: 0.6s ease;
 }
 
@@ -235,11 +249,13 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .tetris img {
-    margin: 10px;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .tetris-23 img {
@@ -248,17 +264,20 @@ a:hover {
 
 .connect-four img {
     vertical-align: top;
-    margin: 10px;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .ttt img {
     vertical-align: top;
-    margin: 10px;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .adder img {
     vertical-align: top;
-    margin: 10px;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .tps img {
@@ -292,7 +311,8 @@ a:hover {
 }
 
 #contact img {
-    margin: 45px;
+    margin-top: 45px;
+    margin-bottom: 45px;
 }
 
 .logo {
@@ -310,7 +330,8 @@ a:hover {
 }
 
 #links img {
-    margin: 45px;
+    margin-top: 45px;
+    margin-bottom: 45px;
 }
 
 .hide {
