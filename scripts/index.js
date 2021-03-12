@@ -1,8 +1,6 @@
 // On load
-window.onload = function() {
-    let welcomeH2 = document.querySelector(".welcome h2");
-    welcomeH2.classList.add("fade-in", "expand");
-}
+let welcomeh2 = document.querySelector(".welcome h2");
+welcomeh2.classList.add("fade-in", "expand");
 
 // Hamburger menu
 const toggler = document.querySelector(".toggler");
