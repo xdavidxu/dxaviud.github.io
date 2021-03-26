@@ -109,7 +109,7 @@ let welcome = document.querySelector(".welcome");
 function changeTheme(theme) {
     currentTheme = theme;
     if (theme == "default") {
-        themeColor.href = "";
+        themeColor.href = "styles/none.css";
         welcome.style.backgroundImage =
             'url("../images/default-background.jpg")';
     } else if (theme == "aquamarine") {
