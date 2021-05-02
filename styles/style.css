@@ -339,6 +339,13 @@ a:hover {
     box-shadow: 0 0 100px #aaa;
 }
 
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #links img {
     margin-top: 45px;
     margin-bottom: 45px;
