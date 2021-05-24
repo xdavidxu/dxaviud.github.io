@@ -1,209 +1,403 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="David Xu">
-    <meta name="description" content="GitHub source code: https://github.com/dxaviud/dxaviud.github.io">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="David Xu" />
+        <meta
+            name="description"
+            content="GitHub source code: https://github.com/dxaviud/dxaviud.github.io"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
-    <!--Uncomment above for bootstrap-->
-    <link id="theme-color" rel="stylesheet" href="styles/none.css">
-    
-    <script src="scripts/index.js" defer></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link id="theme-color" rel="stylesheet" href="styles/none.css" />
 
-    <title>David Xu</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="menu-wrap">
-                <input type="checkbox" class="toggler">
-                <div class="hamburger"><div></div></div>
-                <div class="menu">
-                    <div>
+        <script src="scripts/index.js" defer></script>
+
+        <title>David Xu</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="menu-wrap">
+                    <input type="checkbox" class="toggler" />
+                    <div class="hamburger"><div></div></div>
+                    <div class="menu">
                         <div>
-                            <ul class="menu-items-list">
-                                <li><a href="#about" class="untoggle">About</a></li>
-                                <li><a href="#projects" class="untoggle">Projects</a></li>
-                                <li><a href="#contact" class="untoggle">Contact</a></li>
-                                <li><a href="#links" class="untoggle">Links</a></li>
-                            </ul>
+                            <div>
+                                <ul class="menu-items-list">
+                                    <li>
+                                        <a href="#about" class="untoggle"
+                                            >About</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#projects" class="untoggle"
+                                            >Projects</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#contact" class="untoggle"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#links" class="untoggle"
+                                            >Links</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+            <div class="theme-picker">
+                <div data-theme="default" class="circle default-theme"></div>
+                <div
+                    data-theme="aquamarine"
+                    class="circle aquamarine-theme"
+                ></div>
+                <div data-theme="crimson" class="circle crimson-theme"></div>
+                <div data-theme="gold" class="circle gold-theme"></div>
             </div>
-        </nav>
-        <div class="theme-picker">
-            <div data-theme="default" class="circle default-theme"></div>
-            <div data-theme="aquamarine" class="circle aquamarine-theme"></div>
-            <div data-theme="crimson" class="circle crimson-theme"></div>
-            <div data-theme="gold" class="circle gold-theme"></div>
-        </div>
-        <h1 id="top">
-            <a href="#about" class="h1-link">D<span class="last-name-letter">x</span>avi<span class="last-name-letter">u</span>d</a>
-        </h1>
-    </header>
+            <h1 id="top">
+                <a href="#about" class="h1-link"
+                    >D<span class="last-name-letter">x</span>avi<span
+                        class="last-name-letter"
+                        >u</span
+                    >d</a
+                >
+            </h1>
+        </header>
 
-    <main>
+        <main>
+            <section class="welcome">
+                <h2>Welcome</h2>
+            </section>
 
-        <section class="welcome">
-            <h2>Welcome</h2>
-        </section>
+            <section id="about">
+                <h2>About</h2>
+                <p>
+                    I'm David Xu, a software engineering student studying at the
+                    University of Waterloo. Welcome to my website! Checkout the
+                    hamburger at the top left to navigate to various places. You
+                    can also pick the color theme at the top right. :)
+                </p>
+            </section>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>I'm David Xu, a software engineering student studying at the University of Waterloo. Welcome to my website! Checkout the hamburger at the top left to navigate to various places. You can also pick the color theme at the top right. :)</p>
-        </section>
-        
-        <hr>
-        
-        <section id="projects">
-            <h2>Projects</h2>
+            <hr />
 
-            <div class="bug-tracker">
-                <h3><a href="https://github.com/dxaviud/bug-tracker" target="_blank">Bug Tracker</a></h3>
-                <p>I'm creating a bug tracker using the Flask web framework. I'm using PostgreSQL to manage the database and SQLAlchemy to query the database. It is deployed to Heroku, but it will take some time to load as the Heroku dyno needs to wake up.</p>
-                <a href="https://bug-tracker-41481.herokuapp.com" target="_blank">Access it</a>
-            </div>
+            <section id="projects">
+                <h2>Projects</h2>
 
-            <div class="arls">
-                <h3><a href="https://github.com/dxaviud/anti-rona-lock-system" target="_blank">Anti-Rona Lock System</a></h3>
-                <p>I built an intelligent lock that detects mask usage and calculates physical distances between people to unlock accordingly. I built this with 4 other students in my cohort using Python.</p>
-                <div class="arls-slides">
-                    <h4 id="arls-slide-title">Mask Detection</h4>
-                    <img class="arls-slide-img" src="images/arlsmask.PNG" alt="Mask Detection">
-                    <img class="arls-slide-img" src="images/arlsdistance.PNG" alt="Distance Detection">
-                    <img class="arls-slide-img" src="images/arlslog.PNG" alt="Logs">
-                    <button class="slides-button left"> &lt; </button>
-                    <button class="slides-button right"> &gt; </button>
+                <div class="bug-tracker">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/bug-tracker"
+                            target="_blank"
+                            >Bug Tracker</a
+                        >
+                    </h3>
+                    <p>
+                        I'm creating a bug tracker using the Flask web
+                        framework. I'm using PostgreSQL to manage the database
+                        and SQLAlchemy to query the database. It is deployed to
+                        Heroku, but it will take some time to load as the Heroku
+                        dyno needs to wake up.
+                    </p>
+                    <a
+                        href="https://bug-tracker-41481.herokuapp.com"
+                        target="_blank"
+                        >Access it</a
+                    >
                 </div>
-            </div>
 
-            <div class="chess">
-                <h3><a href="https://github.com/dxaviud/chess" target="_blank">Chess</a></h3>
-                <p>I made a chess application from scratch using Java.</p>
-                <h4 id="demo">Feature demos</h4>
-                <div class="chess-slides">
-                    <h4 id="chess-slide-title">New Game</h4>
-                    <video class="chess-slide-video" src="videos/New-Game-Demo.mp4" muted controls>New Game</video>
-                    <video class="chess-slide-video" src="videos/Checkmate-Demo.mp4" muted controls>Checkmate</video>
-                    <video class="chess-slide-video" src="videos/Animation-Demo.mp4" muted controls>Animation</video>
-                    <video class="chess-slide-video" src="videos/Save-Demo.mp4" muted controls>Save</video>
-                    <video class="chess-slide-video" src="videos/Reset-Undo-Demo.mp4" muted controls>Undo and Reset</video>
-                    <video class="chess-slide-video" src="videos/Pawn-Promotion-Demo.mp4" muted controls>Pawn Promotion</video>
-                    <button class="slides-button left"> &lt; </button>
-                    <button class="slides-button right"> &gt; </button>
+                <div class="arls">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/anti-rona-lock-system"
+                            target="_blank"
+                            >Anti-Rona Lock System</a
+                        >
+                    </h3>
+                    <p>
+                        I built an intelligent lock that detects mask usage and
+                        calculates physical distances between people to unlock
+                        accordingly. I built this with 4 other students in my
+                        cohort using Python.
+                    </p>
+                    <div class="arls-slides">
+                        <h4 id="arls-slide-title">Mask Detection</h4>
+                        <img
+                            class="arls-slide-img"
+                            src="images/arlsmask.PNG"
+                            alt="Mask Detection"
+                        />
+                        <img
+                            class="arls-slide-img"
+                            src="images/arlsdistance.PNG"
+                            alt="Distance Detection"
+                        />
+                        <img
+                            class="arls-slide-img"
+                            src="images/arlslog.PNG"
+                            alt="Logs"
+                        />
+                        <button class="slides-button left">&lt;</button>
+                        <button class="slides-button right">&gt;</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="uttt">
-                <h3><a href="https://github.com/dxaviud/ultimate-tictactoe" target="_blank">Ultimate Tic-Tac-Toe</a></h3>
-                <p>I built an Ulitmate Tic-Tac-Toe app from scratch using Java.</p>
-                <img src="images/ultimatettt.gif" alt="">
-            </div>
-
-            <div class="gol">
-                <h3><a href="https://github.com/dxaviud/conways-game-of-life" target="_blank">Conway's Game of Life</a></h3>
-                <p>I created a Conway's Game of Life simulator using Python.</p>
-                <img src="images/gameoflife.gif" alt="">
-            </div>
-
-            <div class="minicanvas">
-                <h3><a href="https://github.com/dxaviud/mini-canvas" target="_blank">Mini Canvas</a></h3>
-                <p>I made a Canvas app using Python.</p>
-                <img src="images/minicanvas.gif" alt="">
-            </div>
-
-            <div class="tetris">
-                <h3><a href="https://github.com/dxaviud/tetris" target="_blank">Tetris</a></h3>
-                <p>I made Tetris using C++.</p>
-                <div class="tetris-1">
-                    <img src="images/tetris1.PNG" alt="">
+                <div class="chess">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/chess"
+                            target="_blank"
+                            >Chess</a
+                        >
+                    </h3>
+                    <p>I made a chess application from scratch using Java.</p>
+                    <h4 id="demo">Feature demos</h4>
+                    <div class="chess-slides">
+                        <h4 id="chess-slide-title">New Game</h4>
+                        <video
+                            class="chess-slide-video"
+                            src="videos/New-Game-Demo.mp4"
+                            muted
+                            controls
+                        >
+                            New Game
+                        </video>
+                        <video
+                            class="chess-slide-video"
+                            src="videos/Checkmate-Demo.mp4"
+                            muted
+                            controls
+                        >
+                            Checkmate
+                        </video>
+                        <video
+                            class="chess-slide-video"
+                            src="videos/Animation-Demo.mp4"
+                            muted
+                            controls
+                        >
+                            Animation
+                        </video>
+                        <video
+                            class="chess-slide-video"
+                            src="videos/Save-Demo.mp4"
+                            muted
+                            controls
+                        >
+                            Save
+                        </video>
+                        <video
+                            class="chess-slide-video"
+                            src="videos/Reset-Undo-Demo.mp4"
+                            muted
+                            controls
+                        >
+                            Undo and Reset
+                        </video>
+                        <video
+                            class="chess-slide-video"
+                            src="videos/Pawn-Promotion-Demo.mp4"
+                            muted
+                            controls
+                        >
+                            Pawn Promotion
+                        </video>
+                        <button class="slides-button left">&lt;</button>
+                        <button class="slides-button right">&gt;</button>
+                    </div>
                 </div>
-                <div class="tetris-23">
-                    <img src="images/tetris2.PNG" alt="">
-                    <img src="images/tetris3.PNG" alt="">
+
+                <div class="uttt">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/ultimate-tictactoe"
+                            target="_blank"
+                            >Ultimate Tic-Tac-Toe</a
+                        >
+                    </h3>
+                    <p>
+                        I built an Ulitmate Tic-Tac-Toe app from scratch using
+                        Java.
+                    </p>
+                    <img src="images/ultimatettt.gif" alt="" />
                 </div>
-            </div>
 
-            <div class="checkers">
-                <h3><a href="https://github.com/dxaviud/checkers" target="_blank">Checkers</a></h3>
-                <p>I made Checkers using C++.</p>
-                <img src="images/checkers1.PNG" alt="">
-            </div>
+                <div class="gol">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/conways-game-of-life"
+                            target="_blank"
+                            >Conway's Game of Life</a
+                        >
+                    </h3>
+                    <p>
+                        I created a Conway's Game of Life simulator using
+                        Python.
+                    </p>
+                    <img src="images/gameoflife.gif" alt="" />
+                </div>
 
-            <div class="connect-four">
-                <h3><a href="https://github.com/dxaviud/connect-four" target="_blank">Connect Four</a></h3>
-                <p>I made Connect Four using C++.</p>
-                <img src="images/connect_four1.PNG" alt="">
-                <img src="images/connect_four2.PNG" alt="">
-            </div>
+                <div class="minicanvas">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/mini-canvas"
+                            target="_blank"
+                            >Mini Canvas</a
+                        >
+                    </h3>
+                    <p>I made a Canvas app using Python.</p>
+                    <img src="images/minicanvas.gif" alt="" />
+                </div>
 
-            <div class="smaller-projects">
-                <h3>Smaller projects</h3>
-                <ul>
-                    <li><a href="https://github.com/dxaviud/tictactoe" target="_blank">Tic-Tac-Toe</a></li>
-                    <li><a href="https://github.com/dxaviud/adder" target="_blank">Adder</a></li>
-                    <li><a href="https://github.com/dxaviud/teleprinter-simulator" target="_blank">Teleprinter Simulator</a></li>
-                </ul>
-            </div>
-            <!-- <p class="coming-soon">More project showcases and demos are coming soon!</p> -->
-        </section>
+                <div class="tetris">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/tetris"
+                            target="_blank"
+                            >Tetris</a
+                        >
+                    </h3>
+                    <p>I made Tetris using C++.</p>
+                    <div class="tetris-1">
+                        <img src="images/tetris1.PNG" alt="" />
+                    </div>
+                    <div class="tetris-23">
+                        <img src="images/tetris2.PNG" alt="" />
+                        <img src="images/tetris3.PNG" alt="" />
+                    </div>
+                </div>
 
-        <hr>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <address>
-                <a href="mailto:d83xu@uwaterloo.ca" target="_blank">
-                    <img src="images/email-logo.png" alt="email logo" class="logo">
+                <div class="checkers">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/checkers"
+                            target="_blank"
+                            >Checkers</a
+                        >
+                    </h3>
+                    <p>I made Checkers using C++.</p>
+                    <img src="images/checkers1.PNG" alt="" />
+                </div>
+
+                <div class="connect-four">
+                    <h3>
+                        <a
+                            href="https://github.com/dxaviud/connect-four"
+                            target="_blank"
+                            >Connect Four</a
+                        >
+                    </h3>
+                    <p>I made Connect Four using C++.</p>
+                    <img src="images/connect_four1.PNG" alt="" />
+                    <img src="images/connect_four2.PNG" alt="" />
+                </div>
+
+                <div class="smaller-projects">
+                    <h3>Smaller projects</h3>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://github.com/dxaviud/tictactoe"
+                                target="_blank"
+                                >Tic-Tac-Toe</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/dxaviud/adder"
+                                target="_blank"
+                                >Adder</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/dxaviud/teleprinter-simulator"
+                                target="_blank"
+                                >Teleprinter Simulator</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <!-- <p class="coming-soon">More project showcases and demos are coming soon!</p> -->
+            </section>
+
+            <hr />
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <address>
+                    <a href="mailto:d83xu@uwaterloo.ca" target="_blank">
+                        <img
+                            src="images/email-logo.png"
+                            alt="email logo"
+                            class="logo"
+                        />
+                    </a>
+                </address>
+            </section>
+
+            <hr />
+        </main>
+
+        <footer>
+            <section id="links">
+                <h2>Links</h2>
+                <a href="resume/David_Xu_Resume.pdf" target="_blank">
+                    <img
+                        src="images/resume-logo.png"
+                        alt="resume logo"
+                        class="logo"
+                    />
                 </a>
-            </address>
-            <!-- <form action="mailto:d83xu@uwaterloo.ca" method="POST" enctype="multipart/form-data" name="EmailForm">
-                <div>
-                    <label for="contact-name">Name: </label>
-                    <br>
-                    <input id="contact-name" type="text" size="19" name="ContactName">
-                </div>
-                <div>
-                    <label for="contact-text">Message: </label>
-                    <br>
-                    <textarea id="contact-text" name="ContactText" rows="10" cols="60"></textarea>
-                </div>
-                <input type="submit" value="Submit">
-            </form> -->
+                <a href="https://github.com/dxaviud" target="_blank">
+                    <img
+                        src="images/github-logo.png"
+                        alt="github logo"
+                        class="logo"
+                    />
+                </a>
+                <a href="https://www.linkedin.com/in/dxaviud" target="_blank">
+                    <img
+                        src="images/linkedin-logo.png"
+                        alt="linkedin logo"
+                        class="logo"
+                    />
+                </a>
+                <a href="mailto:d83xu@uwaterloo.com" target="_blank">
+                    <img
+                        src="images/email-logo.png"
+                        alt="email logo"
+                        class="logo"
+                    />
+                </a>
+            </section>
+        </footer>
 
-        </section>
+        <!-- <div id="like-button-container"></div> -->
 
-        <hr>
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
 
-    </main>
-    
-    <footer>
-        <section id="links">
-            <h2>Links</h2>
-            <a href="resume/David_Xu_Resume.pdf" target="_blank">
-                <img src="images/resume-logo.png" alt="resume logo" class="logo">
-            </a>
-            <a href="https://github.com/dxaviud" target="_blank">
-                <img src="images/github-logo.png" alt="github logo" class="logo">
-            </a>
-            <a href="https://www.linkedin.com/in/dxaviud" target="_blank">
-                <img src="images/linkedin-logo.png" alt="linkedin logo" class="logo">
-            </a>
-            <a href="mailto:d83xu@uwaterloo.com" target="_blank">
-                <img src="images/email-logo.png" alt="email logo" class="logo">
-            </a>
-        </section>
-    </footer>
+        <!-- <script
+            src="https://unpkg.com/react@17/umd/react.production.min.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+            crossorigin
+        ></script> -->
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
-    <!--Uncomment above for bootstrap-->
-</body>
+        <!-- Load our React component. -->
+
+        <!-- <script src="like-button.js"></script> -->
+    </body>
 </html>
-
-
