@@ -1,19 +1,19 @@
-//Source: https://css-tricks.com/snippets/css/typewriter-effect/
+//Original source: https://css-tricks.com/snippets/css/typewriter-effect/
 
-const TxtType = function (el, initialValue, toRotate, period) {
-    this.initialValue = initialValue;
-    this.toRotate = toRotate;
+const TypewriterAnimation = function (el, prefix, toRotate, period) {
     this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
+    this.prefix = prefix;
+    this.toRotate = toRotate;
+    this.period = period;
     this.txt = "";
+    this.loopNum = 0;
     this.tick();
     this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+TypewriterAnimation.prototype.tick = function () {
+    let i = this.loopNum % this.toRotate.length;
+    let fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -22,13 +22,11 @@ TxtType.prototype.tick = function () {
     }
 
     const span = document.createElement("span");
-    span.setAttribute("class", "wrap");
-    span.innerText = this.initialValue + this.txt;
+    span.innerText = this.prefix + this.txt;
     span.style.fontSize = "xx-large";
     this.el.innerHTML = span.outerHTML;
 
-    var that = this;
-    var delta = 150 - Math.random() * 100;
+    let delta = 150 - Math.random() * 100;
 
     if (this.isDeleting) {
         delta /= 2;
@@ -43,6 +41,7 @@ TxtType.prototype.tick = function () {
         delta = 500;
     }
 
+    const that = this;
     setTimeout(function () {
         that.tick();
     }, delta);
@@ -51,15 +50,15 @@ TxtType.prototype.tick = function () {
 window.onload = function () {
     const elements = document.getElementsByClassName("typewrite");
     for (var i = 0; i < elements.length; i++) {
-        const initialValue = elements[i].getAttribute("text-prefix");
+        const prefix = elements[i].getAttribute("text-prefix");
         const toRotate = elements[i].getAttribute("text-array");
         const period = elements[i].getAttribute("rotate-period");
         if (toRotate) {
-            new TxtType(
+            new TypewriterAnimation(
                 elements[i],
-                initialValue,
+                prefix,
                 JSON.parse(toRotate),
-                period
+                parseInt(period, 10) || 2000
             );
         }
     }
