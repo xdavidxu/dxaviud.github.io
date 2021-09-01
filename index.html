@@ -15,6 +15,7 @@
         <link id="theme-color" rel="stylesheet" href="styles/none.css" />
 
         <script src="scripts/index.js" defer></script>
+        <script src="scripts/typewriter.js" defer></script>
 
         <title>David Xu</title>
     </head>
@@ -80,12 +81,19 @@
 
             <section id="about">
                 <h2>About</h2>
-                <p>
+                <div
+                    class="typewrite"
+                    text-prefix="Hi, I'm David Xu, "
+                    text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "your lifelong rival.", "a master of all trades, jack of none.", "how are you today?", "do you even VIM bro?"]'
+                    rotate-period="2000"
+                    style="height: 75vh; line-height: 70vh"
+                ></div>
+                <!-- <p>
                     I'm David Xu, a software engineering student studying at the
                     University of Waterloo. Welcome to my website! Checkout the
                     hamburger at the top left to navigate to various places. You
                     can also pick the color theme at the top right. :)
-                </p>
+                </p> -->
             </section>
 
             <hr />

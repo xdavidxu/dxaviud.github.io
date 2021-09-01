@@ -9,7 +9,7 @@ const toggler = document.querySelector(".toggler");
 const menuItemsList = document.querySelector("ul.menu-items-list");
 menuItemsList.addEventListener("click", function () {
     toggler.click();
-})
+});
 
 // Anti-Rona Lock System slides
 let arlsSlideIndex = 0;
@@ -17,12 +17,14 @@ let arlsSlides = document.getElementsByClassName("arls-slide-img");
 showImage();
 
 let arlsLeftButton = document.querySelector(".arls-slides .slides-button.left");
-let arlsRightButton = document.querySelector(".arls-slides .slides-button.right");
+let arlsRightButton = document.querySelector(
+    ".arls-slides .slides-button.right"
+);
 arlsLeftButton.addEventListener("click", function () {
-    changeImage(-1)
+    changeImage(-1);
 });
 arlsRightButton.addEventListener("click", function () {
-    changeImage(+1)
+    changeImage(+1);
 });
 
 function changeImage(delta) {
@@ -53,13 +55,17 @@ let chessSlideIndex = 0;
 let chessSlides = document.getElementsByClassName("chess-slide-video");
 showVideo();
 
-let chessLeftButton = document.querySelector(".chess-slides .slides-button.left");
-let chessRightButton = document.querySelector(".chess-slides .slides-button.right");
+let chessLeftButton = document.querySelector(
+    ".chess-slides .slides-button.left"
+);
+let chessRightButton = document.querySelector(
+    ".chess-slides .slides-button.right"
+);
 chessLeftButton.addEventListener("click", function () {
-    changeVideo(-1)
+    changeVideo(-1);
 });
 chessRightButton.addEventListener("click", function () {
-    changeVideo(+1)
+    changeVideo(+1);
 });
 
 function changeVideo(delta) {
@@ -122,8 +128,7 @@ function changeTheme(theme) {
             'url("../images/crimson-background.jpg")';
     } else if (theme == "gold") {
         themeColor.href = "styles/gold.css";
-        welcome.style.backgroundImage =
-            'url("../images/gold-background.jpg")';
+        welcome.style.backgroundImage = 'url("../images/gold-background.jpg")';
     }
 }
 
