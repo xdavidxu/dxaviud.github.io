@@ -49,17 +49,30 @@ TypewriterAnimation.prototype.tick = function () {
 
 window.onload = function () {
     const elements = document.getElementsByClassName("typewrite");
-    for (var i = 0; i < elements.length; i++) {
-        const prefix = elements[i].getAttribute("text-prefix");
-        const toRotate = elements[i].getAttribute("text-array");
-        const period = elements[i].getAttribute("rotate-period");
+    for (const element of elements) {
+        const prefix = element.getAttribute("text-prefix");
+        const toRotate = element.getAttribute("text-array");
+        const period = element.getAttribute("rotate-period");
         if (toRotate) {
             new TypewriterAnimation(
-                elements[i],
+                element,
                 prefix,
                 JSON.parse(toRotate),
                 parseInt(period, 10) || 2000
             );
         }
     }
+    // for (var i = 0; i < elements.length; i++) {
+    //     const prefix = elements[i].getAttribute("text-prefix");
+    //     const toRotate = elements[i].getAttribute("text-array");
+    //     const period = elements[i].getAttribute("rotate-period");
+    //     if (toRotate) {
+    //         new TypewriterAnimation(
+    //             elements[i],
+    //             prefix,
+    //             JSON.parse(toRotate),
+    //             parseInt(period, 10) || 2000
+    //         );
+    //     }
+    // }
 };
