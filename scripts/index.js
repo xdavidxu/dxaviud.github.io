@@ -1,5 +1,5 @@
 // On load
-let welcomeh2 = document.querySelector(".welcome h2");
+let welcomeh2 = document.querySelector("#welcome h2");
 welcomeh2.classList.add("fade-in", "expand");
 
 // Hamburger menu
@@ -110,7 +110,7 @@ for (let i = 0; i < circles.length; i++) {
 }
 
 let themeColor = document.getElementById("theme-color");
-let welcome = document.querySelector(".welcome");
+let welcome = document.getElementById("welcome");
 
 function changeTheme(theme) {
     currentTheme = theme;
