@@ -15,7 +15,7 @@
         <link id="theme-color" rel="stylesheet" href="styles/none.css" />
 
         <script src="scripts/index.js" defer></script>
-        <script src="scripts/typewriter.js" defer></script>
+        <script src="scripts/typewriter.js" type="module" defer></script>
         <script src="scripts/loopback-scroller.js" defer></script>
 
         <title>David Xu</title>
@@ -87,13 +87,14 @@
 
             <section id="about">
                 <h2>About</h2>
-                <div
-                    class="typewrite"
-                    text-prefix="Hi, I'm David Xu, "
-                    text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "a master of all trades, jack of none.", "how are you today?", "do you even VIM bro?"]'
-                    rotate-period="2000"
-                    style="height: 75vh; line-height: 70vh"
-                ></div>
+                <div id="about-wrapper" class="flex-center-one">
+                    <div
+                        class="typewrite"
+                        text-prefix="Hi, I'm David Xu, "
+                        text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "a master of all trades, jack of none.", "how are you today?", "do you even VIM bro?"]'
+                        rotate-period="2000"
+                    ></div>
+                </div>
                 <!-- <p>
                     I'm David Xu, a software engineering student studying at the
                     University of Waterloo. Welcome to my website! Checkout the

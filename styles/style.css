@@ -147,6 +147,14 @@ section {
     margin-bottom: 45px;
 }
 
+#about-wrapper {
+    height: 75vh;
+}
+
+#about-wrapper > div {
+    margin-bottom: 10vh;
+}
+
 #projects {
     padding-bottom: 80px;
 }

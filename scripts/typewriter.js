@@ -1,3 +1,5 @@
+import inViewport from "./in-viewport.js";
+
 //Original source: https://css-tricks.com/snippets/css/typewriter-effect/
 
 const TypewriterAnimation = function (el, prefix, toRotate, period) {
@@ -12,6 +14,14 @@ const TypewriterAnimation = function (el, prefix, toRotate, period) {
 };
 
 TypewriterAnimation.prototype.tick = function () {
+    if (!inViewport(this.el)) {
+        const that = this;
+        setTimeout(function () {
+            that.tick();
+        }, 100);
+        return;
+    }
+
     let i = this.loopNum % this.toRotate.length;
     let fullTxt = this.toRotate[i];
 
@@ -60,6 +70,7 @@ window.onload = function () {
                 JSON.parse(toRotate),
                 parseInt(period, 10) || 2000
             );
+            console.log("Typewriter effect initialized");
         }
     }
     // for (var i = 0; i < elements.length; i++) {
