@@ -417,7 +417,8 @@ video,
     width: var(--width-threshold);
 }
 
-@media (max-width: var(--width-threshold)) {
+@media (max-width: 800px) {
+    /*Can't use var in media queries, make sure to change this if you change the --width-threshold variable*/
     .arls-slides img {
         height: auto;
     }
