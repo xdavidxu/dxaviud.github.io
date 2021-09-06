@@ -233,10 +233,6 @@ a:hover {
     text-decoration: none;
 }
 
-#projects .bug-tracker p {
-    margin-bottom: 10px;
-}
-
 .bug-tracker a {
     color: var(--primary-color);
 }
