@@ -70,9 +70,9 @@ function hideChildren(children, filter) {
 
 function styleSlideshowBtn(btn) {
     btn.style.position = "absolute";
-    btn.style.width = "max(15%, 50px)";
-    btn.style.height = "100%";
-    btn.style.top = "0";
+    btn.style.width = "max(10%, 50px)";
+    btn.style.height = "40px";
+    btn.style.top = "calc((100% + 40px) / 2)";
     btn.style.fontSize = "x-large";
     btn.style.fontWeight = "1000";
     btn.style.border = "none";

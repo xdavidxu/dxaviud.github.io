@@ -4,6 +4,7 @@
     --background-color: rgba(25, 25, 25, 1);
     --odd-color: rgba(35, 35, 35, 1);
     --menu-speed: 0.75s;
+    --width-threshold: 800px;
 }
 
 * {
@@ -90,7 +91,7 @@ h2:hover {
 
 h2,
 h3 {
-    max-width: 600px;
+    max-width: var(--witdh-threshold);
     margin: 0.83em auto;
 }
 
@@ -163,6 +164,14 @@ section {
     margin-bottom: 45px;
 }
 
+#projects ul {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--width-threshold);
+    padding-left: 1em;
+}
+
 #projects > div {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -182,10 +191,10 @@ li {
     letter-spacing: 1px;
 }
 
-h3 + p {
+h3 ~ p {
     font-size: 20px;
     font-style: italic;
-    max-width: 600px;
+    max-width: var(--width-threshold);
     margin: auto;
 }
 
@@ -213,6 +222,11 @@ iframe {
 footer {
     padding-top: 20px;
     height: 100px;
+}
+
+a,
+a:visited {
+    color: var(--primary-color);
 }
 
 a:hover {
@@ -358,7 +372,6 @@ footer {
 }
 
 #links-wrapper::-webkit-scrollbar {
-    /* WebKit */
     width: 0;
     height: 0;
 }
@@ -395,7 +408,7 @@ footer {
 }
 
 .arls-slides img {
-    height: 600px;
+    height: var(--width-threshold);
 }
 
 .chess img,
@@ -405,10 +418,10 @@ footer {
 .minicanvas img,
 video,
 .tps img {
-    width: 600px;
+    width: var(--width-threshold);
 }
 
-@media (max-width: 600px) {
+@media (max-width: var(--width-threshold)) {
     .arls-slides img {
         height: auto;
     }
