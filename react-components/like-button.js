@@ -20,4 +20,4 @@ class LikeButton extends React.Component {
 let domContainer = document.querySelector("#like-button-container");
 ReactDOM.render(<LikeButton />, domContainer);
 
-// npx babel --watch src --out-dir . --presets react-app/prod
+// npx babel react-components --out-dir scripts --presets react-app/prod

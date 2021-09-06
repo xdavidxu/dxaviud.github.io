@@ -36,7 +36,9 @@ for (const scroller of scrollers) {
             }
         }
     });
-    console.log("Loopback scroller initialized with buffer size " + buffer);
+    console.log(
+        "Loopback scroller initialized (with buffer size " + buffer + ")"
+    );
 }
 
 // const linksWrapper = document.querySelector("#links-wrapper");
