@@ -1,6 +1,6 @@
 import inViewport from "./in-viewport.js";
 
-//Original source: https://css-tricks.com/snippets/css/typewriter-effect/
+//Source: https://css-tricks.com/snippets/css/typewriter-effect/
 
 const TypewriterAnimation = function (el, prefix, toRotate, period) {
     this.el = el;
@@ -57,33 +57,18 @@ TypewriterAnimation.prototype.tick = function () {
     }, delta);
 };
 
-window.onload = function () {
-    const elements = document.getElementsByClassName("typewrite");
-    for (const element of elements) {
-        const prefix = element.getAttribute("text-prefix");
-        const toRotate = element.getAttribute("text-array");
-        const period = element.getAttribute("rotate-period");
-        if (toRotate) {
-            new TypewriterAnimation(
-                element,
-                prefix,
-                JSON.parse(toRotate),
-                parseInt(period, 10) || 2000
-            );
-            console.log("Typewriter effect initialized");
-        }
+const elements = document.getElementsByClassName("typewrite");
+for (const element of elements) {
+    const prefix = element.getAttribute("text-prefix");
+    const toRotate = element.getAttribute("text-array");
+    const period = element.getAttribute("rotate-period");
+    if (toRotate) {
+        new TypewriterAnimation(
+            element,
+            prefix,
+            JSON.parse(toRotate),
+            parseInt(period, 10) || 2000
+        );
+        console.log("Typewriter effect initialized");
     }
-    // for (var i = 0; i < elements.length; i++) {
-    //     const prefix = elements[i].getAttribute("text-prefix");
-    //     const toRotate = elements[i].getAttribute("text-array");
-    //     const period = elements[i].getAttribute("rotate-period");
-    //     if (toRotate) {
-    //         new TypewriterAnimation(
-    //             elements[i],
-    //             prefix,
-    //             JSON.parse(toRotate),
-    //             parseInt(period, 10) || 2000
-    //         );
-    //     }
-    // }
-};
+}

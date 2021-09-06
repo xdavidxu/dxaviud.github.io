@@ -1,4 +1,4 @@
-let circles = document.getElementsByClassName("circle");
+const circles = document.getElementsByClassName("circle");
 let currentTheme = circles[0].dataset.theme;
 
 for (let i = 0; i < circles.length; i++) {
@@ -14,8 +14,8 @@ for (let i = 0; i < circles.length; i++) {
     });
 }
 
-let themeColor = document.getElementById("theme-color");
-let welcome = document.getElementById("welcome");
+const themeColor = document.getElementById("theme-color");
+const welcome = document.getElementById("welcome");
 
 function changeTheme(theme) {
     currentTheme = theme;
