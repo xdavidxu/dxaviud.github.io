@@ -9,21 +9,7 @@
     --h2-height: 2.66em;
 }
 
-* {
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
+/* refactor */
 header {
     padding-top: 20px;
     height: 85px;
@@ -31,9 +17,8 @@ header {
     overflow: hidden;
 }
 
+/* refactor */
 body {
-    width: auto;
-    margin: 0;
     background-color: var(--background-color);
     color: white;
     font-size: 18px;
@@ -68,12 +53,14 @@ h1 a {
     color: var(--primary-color);
 }
 
+/* refactor */
 h2 {
     font-size: 50px;
     transition: 0.4s ease;
     cursor: default;
 }
 
+/* refactor */
 h3 {
     font-size: 40px;
     transition: 0.4s ease;
@@ -134,21 +121,17 @@ section > h2 {
     opacity: 0;
 }
 
-.fade-in.expand {
-    transition: all 1.5s ease !important;
-    transform: scale(2);
-    opacity: 1 !important;
-}
-
 .last-name-letter {
     color: darkmagenta;
 }
 
+/* refactor */
 #about {
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
+/* refactor */
 #about p {
     font-size: larger;
     text-align: center;
@@ -157,18 +140,22 @@ section > h2 {
     margin-bottom: 45px;
 }
 
+/* refactor */
 #about-wrapper {
     height: 75vh;
 }
 
+/* refactor */
 #about-wrapper > div {
     margin-bottom: 10vh;
 }
 
+/* refactor */
 #projects {
     padding-bottom: 80px;
 }
 
+/* refactor */
 #projects p {
     margin-bottom: 45px;
 }
@@ -182,6 +169,7 @@ section > h2 {
     padding-left: 1em;
 }
 
+/* refactor */
 #projects > div {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -214,13 +202,7 @@ hr {
     transition: 0.6s ease;
 }
 
-iframe {
-    display: block;
-    margin: auto;
-    border: none;
-    border-width: 0;
-}
-
+/* refactor */
 footer {
     padding-top: 20px;
     height: 100px;
@@ -243,11 +225,13 @@ a:hover {
     margin: 0 auto;
 }
 
+/* refactor */
 .chess {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* refactor */
 #demo {
     font-size: 28px;
 }
@@ -256,6 +240,7 @@ a:hover {
     margin: 0 auto;
 }
 
+/* refactor */
 .chess-slides {
     padding-bottom: 50px;
 }
@@ -276,10 +261,12 @@ a:hover {
     opacity: 0.8;
 }
 
+/* what does this do? */
 .slides-button:focus {
     outline: none;
 }
 
+/* refactor */
 .tetris {
     display: flex;
     flex-direction: column;
@@ -288,41 +275,49 @@ a:hover {
     margin-bottom: 10px;
 }
 
+/* refactor */
 .tetris img {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* refactor */
 .tetris-23 img {
     vertical-align: top;
 }
 
+/* refactor */
 .connect-four img {
     vertical-align: top;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* refactor */
 .ttt img {
     vertical-align: top;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* refactor */
 .adder img {
     vertical-align: top;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* refactor */
 .tps img {
     max-width: 800px;
 }
 
+/* refactor */
 #contact {
     height: auto;
 }
 
+/* refactor */
 #contact img {
     margin-top: 45px;
     margin-bottom: 45px;
@@ -400,18 +395,11 @@ a:hover {
     transform: scale(1.2);
 }
 
-.hide {
-    opacity: 0;
-}
-
-.hide:hover {
-    opacity: 1;
-}
-
 .arls-slides img {
     height: var(--width-threshold);
 }
 
+/* refactor */
 .chess img,
 .chess-slide-video,
 .uttt img,
@@ -469,59 +457,6 @@ video,
         font-size: 40px;
         transform: translateX(20px);
     }
-}
-
-.circle {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border-color: black;
-    border-width: 3px;
-    border-style: solid;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.circle:hover {
-    transform: scale(1.2);
-}
-
-.circle.default-theme {
-    background-color: #0395de;
-}
-
-.circle.aquamarine-theme {
-    background-color: aquamarine;
-}
-
-.circle.crimson-theme {
-    background-color: crimson;
-}
-
-.circle.gold-theme {
-    background-color: gold;
-}
-
-.theme-picker {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    height: 150px;
-    width: 40px;
-}
-
-.flex-center-one {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fill-parent {
-    width: 100%;
-    height: 100%;
 }
 
 #jaggedxy-h3 {
