@@ -78,6 +78,7 @@ function styleSlideshowBtn(btn) {
     btn.style.border = "none";
     btn.style.backgroundColor = "white";
     btn.style.opacity = "0.5";
+    btn.style.cursor = "pointer";
     btn.addEventListener("mouseover", () => {
         btn.style.opacity = "1";
         btn.style.color =
