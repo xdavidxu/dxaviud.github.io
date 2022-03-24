@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="author" content="David Xu" />
-        <meta
-            name="description"
-            content="GitHub source code: https://github.com/dxaviud/dxaviud.github.io"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Xu" />
+    <meta
+      name="description"
+      content="GitHub source code: https://github.com/dxaviud/dxaviud.github.io"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!--Favicon-->
+    <!--Favicon-->
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-        <!--CSS-->
+    <!--CSS-->
 
-        <link rel="stylesheet" href="styles/library.css" />
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="styles/menu.css" />
-        <link rel="stylesheet" href="styles/theme-picker.css" />
-        <link id="theme-color" rel="stylesheet" href="styles/none.css" />
+    <link rel="stylesheet" href="styles/library.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/theme-picker.css" />
+    <link id="theme-color" rel="stylesheet" href="styles/none.css" />
 
-        <!--JavaScript-->
+    <!--JavaScript-->
 
-        <script src="scripts/index.js" defer></script>
-        <script src="scripts/theme-picker.js" defer></script>
-        <script src="scripts/typewriter.js" type="module"></script>
-        <script src="scripts/slideshow.js" defer></script>
-        <script src="scripts/loopback-scroller.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/theme-picker.js" defer></script>
+    <script src="scripts/typewriter.js" type="module"></script>
+    <script src="scripts/slideshow.js" defer></script>
+    <script src="scripts/loopback-scroller.js" defer></script>
 
-        <!--React-->
+    <!--React-->
 
-        <!-- <script
+    <!-- <script
             src="https://unpkg.com/react@17/umd/react.production.min.js"
             crossorigin
             defer
@@ -42,7 +42,7 @@
             crossorigin
             defer
         ></script> -->
-        <!-- <script
+    <!-- <script
             src="https://unpkg.com/react@17/umd/react.development.js"
             crossorigin
             defer
@@ -53,557 +53,491 @@
             defer
         ></script> -->
 
-        <!--React components-->
+    <!--React components-->
 
-        <!-- <script src="scripts/like-button.js" defer></script> -->
+    <!-- <script src="scripts/like-button.js" defer></script> -->
 
-        <title>David Xu</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="menu-wrap">
-                    <input type="checkbox" class="toggler" />
-                    <div class="hamburger"><div></div></div>
-                    <div class="menu">
-                        <div>
-                            <div>
-                                <ul class="menu-items-list">
-                                    <li>
-                                        <a href="#welcome" class="untoggle"
-                                            >Welcome</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#about" class="untoggle"
-                                            >About</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#work" class="untoggle"
-                                            >Work</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#projects" class="untoggle"
-                                            >Projects</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#links" class="untoggle"
-                                            >Links</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div class="theme-picker">
-                <div data-theme="default" class="circle default-theme"></div>
-                <div
-                    data-theme="aquamarine"
-                    class="circle aquamarine-theme"
-                ></div>
-                <div data-theme="crimson" class="circle crimson-theme"></div>
-                <div data-theme="gold" class="circle gold-theme"></div>
+    <title>David Xu</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu-wrap">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger"><div></div></div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul class="menu-items-list">
+                  <li>
+                    <a href="#welcome" class="untoggle">Welcome</a>
+                  </li>
+                  <li>
+                    <a href="#about" class="untoggle">About</a>
+                  </li>
+                  <li>
+                    <a href="#work" class="untoggle">Work</a>
+                  </li>
+                  <li>
+                    <a href="#projects" class="untoggle">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#links" class="untoggle">Links</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <h1 id="top">
-                <a href="#about" class="h1-link"
-                    >D<span class="last-name-letter">x</span>avi<span
-                        class="last-name-letter"
-                        >u</span
-                    >d</a
-                >
-            </h1>
-        </header>
+          </div>
+        </div>
+      </nav>
+      <div class="theme-picker">
+        <div data-theme="default" class="circle default-theme"></div>
+        <div data-theme="aquamarine" class="circle aquamarine-theme"></div>
+        <div data-theme="crimson" class="circle crimson-theme"></div>
+        <div data-theme="gold" class="circle gold-theme"></div>
+      </div>
+      <h1 id="top">
+        <a href="#about" class="h1-link"
+          >D<span class="last-name-letter">x</span>avi<span
+            class="last-name-letter"
+            >u</span
+          >d</a
+        >
+      </h1>
+    </header>
 
-        <main>
-            <section id="welcome">
-                <h2>Welcome</h2>
-            </section>
+    <main>
+      <section id="welcome">
+        <h2>Welcome</h2>
+      </section>
 
-            <section id="about">
-                <h2>About</h2>
-                <div id="about-wrapper" class="flex-center-one">
-                    <div
-                        class="typewrite"
-                        text-prefix="Hi, I'm David Xu, "
-                        text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "a master of all trades, jack of none.", "how are you today?", "do you even VIM bro?"]'
-                        rotate-period="2000"
-                    ></div>
-                </div>
-            </section>
+      <section id="about">
+        <h2>About</h2>
+        <div id="about-wrapper" class="flex-center-one">
+          <div
+            class="typewrite"
+            text-prefix="Hi, I'm David Xu, "
+            text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "a master of all trades, jack of none.", "how are you today?", "do you even VIM bro?"]'
+            rotate-period="2000"
+          ></div>
+        </div>
+      </section>
 
-            <hr />
+      <hr />
 
-            <section id="work">
-                <h2>Work</h2>
-                <div>
-                    <h3 id="jaggedxy-h3">
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/574da12101dbaea28965f237/1603376296689-4MB7IU8BT93L4S5KD1UY/JaggedXY+transparent.png?format=300w"
-                            alt="JaggedXY Logo"
-                        />
-                    </h3>
-                    <ul>
-                        <li>
-                            Designed and implemented multiple syntaxes in
-                            OEScript by modifying the grammar and implementing
-                            node reductions and code generation, abstracting and
-                            speeding up the data definition process by about
-                            10x.
-                        </li>
-                        <li>
-                            Built various methods for sending and receiving data
-                            by implementing algorithms for encoding and decoding
-                            binary of different data types, speeding up
-                            inter‑process communication.
-                        </li>
-                        <li>
-                            Designed, implemented, and refactored custom user
-                            controls in the front‑end library to build a new
-                            client.
-                        </li>
-                    </ul>
-                    <p>Contact me for more info.</p>
-                </div>
-            </section>
+      <section id="work">
+        <h2>Work</h2>
+        <div>
+          <h3 id="jaggedxy-h3">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/574da12101dbaea28965f237/1603376296689-4MB7IU8BT93L4S5KD1UY/JaggedXY+transparent.png?format=300w"
+              alt="JaggedXY Logo"
+            />
+          </h3>
+          <ul>
+            <li>
+              Designed and implemented multiple syntaxes in OEScript by
+              modifying the grammar and implementing node reductions and code
+              generation, abstracting and speeding up the data definition
+              process by about 10x.
+            </li>
+            <li>
+              Built various methods for sending and receiving data by
+              implementing algorithms for encoding and decoding binary of
+              different data types, speeding up inter‑process communication.
+            </li>
+            <li>
+              Designed, implemented, and refactored custom user controls in the
+              front‑end library to build a new client.
+            </li>
+          </ul>
+          <p>Contact me for more info.</p>
+        </div>
+      </section>
 
-            <hr />
+      <hr />
 
-            <section id="projects">
-                <h2>Projects</h2>
+      <section id="projects">
+        <h2>Projects</h2>
 
-                <div class="slideshow" min-height="69vh">
-                    <div>
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/dbjson"
-                                target="_blank"
-                                >DbJson</a
-                            >
-                        </h3>
-                        <p>
-                            A (very slim) DBMS for Node.js that uses JSON files
-                            to store data. Designed to be very easy to use and
-                            inspired by Redis.
-                        </p>
-                        <ul>
-                            <li>
-                                Managed directories and JSON files to store,
-                                retrieve, update, and delete database data
-                                efficiently.
-                            </li>
-                            <li>
-                                Implemented a cache system to rapidly retrieve
-                                previously queried, updated, or created data.
-                            </li>
-                        </ul>
-                        <p>
-                            <a
-                                href="https://www.npmjs.com/package/@dxaviud/dbjson"
-                                target="_blank"
-                                >Published</a
-                            >
-                            as an NPM package.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/tictacreactoe"
-                                target="_blank"
-                                >TicTacReactoe</a
-                            >
-                        </h3>
-                        <p>Tic-tac-toe with React's color theme.</p>
-                        <ul>
-                            <li>
-                                Rewrote React’s official tutorial by fixing
-                                bugs, improving appearance, and adding extra
-                                features.
-                            </li>
-                        </ul>
-                        <p>
-                            <a
-                                href="https://tictacreactoe.netlify.app/"
-                                target="_blank"
-                                >Deployed</a
-                            >
-                            to Netlify.
-                        </p>
-                    </div>
-                    <div class="bug-tracker">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/bug-tracker"
-                                target="_blank"
-                                >Bug Tracker</a
-                            >
-                        </h3>
-                        <p>
-                            A bug tracker Flask app using a PostgreSQL database.
-                        </p>
-                        <ul>
-                            <li>
-                                Setup endpoints and populated HTML templates to
-                                send in HTTP responses.
-                            </li>
-                            <li>
-                                Used an ORM (SQLAlchemy) to query and update the
-                                database.
-                            </li>
-                        </ul>
-                        <p>
-                            <a
-                                href="https://bug-tracker-41481.herokuapp.com"
-                                target="_blank"
-                                >Deployed</a
-                            >
-                            to Heroku.
-                        </p>
-                    </div>
+        <div class="slideshow" min-height="69vh">
+          <div>
+            <h3>
+              <a href="https://github.com/dxaviud/dbjson" target="_blank"
+                >DbJson</a
+              >
+            </h3>
+            <p>
+              A (very slim) DBMS for Node.js that uses JSON files to store data.
+              Designed to be very easy to use and inspired by Redis.
+            </p>
+            <ul>
+              <li>
+                Managed directories and JSON files to store, retrieve, update,
+                and delete database data efficiently.
+              </li>
+              <li>
+                Implemented a cache system to rapidly retrieve previously
+                queried, updated, or created data.
+              </li>
+            </ul>
+            <p>
+              <a
+                href="https://www.npmjs.com/package/@dxaviud/dbjson"
+                target="_blank"
+                >Published</a
+              >
+              as an NPM package.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <a href="https://github.com/dxaviud/tictacreactoe" target="_blank"
+                >TicTacReactoe</a
+              >
+            </h3>
+            <p>Tic-tac-toe with React's color theme.</p>
+            <ul>
+              <li>
+                Rewrote React’s official tutorial by fixing bugs, improving
+                appearance, and adding extra features.
+              </li>
+            </ul>
+            <p>
+              <a href="https://tictacreactoe.netlify.app/" target="_blank"
+                >Deployed</a
+              >
+              to Netlify.
+            </p>
+          </div>
+          <div class="bug-tracker">
+            <h3>
+              <a href="https://github.com/dxaviud/bug-tracker" target="_blank"
+                >Bug Tracker</a
+              >
+            </h3>
+            <p>A bug tracker Flask app using a PostgreSQL database.</p>
+            <ul>
+              <li>
+                Setup endpoints and populated HTML templates to send in HTTP
+                responses.
+              </li>
+              <li>
+                Used an ORM (SQLAlchemy) to query and update the database.
+              </li>
+            </ul>
+            <p>
+              <a href="https://bug-tracker-41481.herokuapp.com" target="_blank"
+                >Deployed</a
+              >
+              to Heroku.
+            </p>
+          </div>
 
-                    <div class="arls">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/anti-rona-lock-system"
-                                target="_blank"
-                                >Anti-Rona Lock System</a
-                            >
-                        </h3>
-                        <p>
-                            The software component to an intelligent lock that
-                            detects mask usage and calculates physical distances
-                            between people.
-                        </p>
-                        <ul>
-                            <li>
-                                Took leadership by coordinating the team to
-                                build the project efficiently and on time.
-                            </li>
-                            <li>
-                                Designed and implemented the main application
-                                and integrated computer vision and machine
-                                learning code.
-                            </li>
-                            <li>
-                                Derived and implemented distance calculation
-                                algorithms for images.
-                            </li>
-                        </ul>
-                        <div class="arls-slides">
-                            <h4 id="arls-slide-title">Mask Detection</h4>
-                            <img
-                                class="arls-slide-img"
-                                src="images/arlsmask.PNG"
-                                alt="Mask Detection"
-                            />
-                            <img
-                                class="arls-slide-img"
-                                src="images/arlsdistance.PNG"
-                                alt="Distance Detection"
-                            />
-                            <img
-                                class="arls-slide-img"
-                                src="images/arlslog.PNG"
-                                alt="Logs"
-                            />
-                            <button class="slides-button left">&lt;</button>
-                            <button class="slides-button right">&gt;</button>
-                        </div>
-                    </div>
+          <div class="arls">
+            <h3>
+              <a
+                href="https://github.com/dxaviud/anti-rona-lock-system"
+                target="_blank"
+                >Anti-Rona Lock System</a
+              >
+            </h3>
+            <p>
+              The software component to an intelligent lock that detects mask
+              usage and calculates physical distances between people.
+            </p>
+            <ul>
+              <li>
+                Took leadership by coordinating the team to build the project
+                efficiently and on time.
+              </li>
+              <li>
+                Designed and implemented the main application and integrated
+                computer vision and machine learning code.
+              </li>
+              <li>
+                Derived and implemented distance calculation algorithms for
+                images.
+              </li>
+            </ul>
+            <div class="arls-slides">
+              <h4 id="arls-slide-title">Mask Detection</h4>
+              <img
+                class="arls-slide-img"
+                src="images/arlsmask.PNG"
+                alt="Mask Detection"
+              />
+              <img
+                class="arls-slide-img"
+                src="images/arlsdistance.PNG"
+                alt="Distance Detection"
+              />
+              <img class="arls-slide-img" src="images/arlslog.PNG" alt="Logs" />
+              <button class="slides-button left">&lt;</button>
+              <button class="slides-button right">&gt;</button>
+            </div>
+          </div>
 
-                    <div class="chess">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/chess"
-                                target="_blank"
-                                >Chess</a
-                            >
-                        </h3>
-                        <p>
-                            A chess app built from scratch (no third-party
-                            libraries) using pure Java.
-                        </p>
-                        <ul>
-                            <li>
-                                Designed and implemented the entire application
-                                independently.
-                            </li>
-                            <li>
-                                Developed and implemented chess piece movement,
-                                move validation, and checkmate checking
-                                algorithms.
-                            </li>
-                            <li>
-                                Designed and created a GUI with movement
-                                animations.
-                            </li>
-                        </ul>
-                        <h4 id="demo">Feature demos</h4>
-                        <div class="chess-slides">
-                            <h4 id="chess-slide-title">New Game</h4>
-                            <video
-                                class="chess-slide-video"
-                                src="videos/New-Game-Demo.mp4"
-                                muted
-                                controls
-                            >
-                                New Game
-                            </video>
-                            <video
-                                class="chess-slide-video"
-                                src="videos/Checkmate-Demo.mp4"
-                                muted
-                                controls
-                            >
-                                Checkmate
-                            </video>
-                            <video
-                                class="chess-slide-video"
-                                src="videos/Animation-Demo.mp4"
-                                muted
-                                controls
-                            >
-                                Animation
-                            </video>
-                            <video
-                                class="chess-slide-video"
-                                src="videos/Save-Demo.mp4"
-                                muted
-                                controls
-                            >
-                                Save
-                            </video>
-                            <video
-                                class="chess-slide-video"
-                                src="videos/Reset-Undo-Demo.mp4"
-                                muted
-                                controls
-                            >
-                                Undo and Reset
-                            </video>
-                            <video
-                                class="chess-slide-video"
-                                src="videos/Pawn-Promotion-Demo.mp4"
-                                muted
-                                controls
-                            >
-                                Pawn Promotion
-                            </video>
-                            <button class="slides-button left">&lt;</button>
-                            <button class="slides-button right">&gt;</button>
-                        </div>
-                    </div>
+          <div class="chess">
+            <h3>
+              <a href="https://github.com/dxaviud/chess" target="_blank"
+                >Chess</a
+              >
+            </h3>
+            <p>
+              A chess app built from scratch (no third-party libraries) using
+              pure Java.
+            </p>
+            <ul>
+              <li>
+                Designed and implemented the entire application independently.
+              </li>
+              <li>
+                Developed and implemented chess piece movement, move validation,
+                and checkmate checking algorithms.
+              </li>
+              <li>Designed and created a GUI with movement animations.</li>
+            </ul>
+            <h4 id="demo">Feature demos</h4>
+            <div class="chess-slides">
+              <h4 id="chess-slide-title">New Game</h4>
+              <video
+                class="chess-slide-video"
+                src="videos/New-Game-Demo.mp4"
+                muted
+                controls
+              >
+                New Game
+              </video>
+              <video
+                class="chess-slide-video"
+                src="videos/Checkmate-Demo.mp4"
+                muted
+                controls
+              >
+                Checkmate
+              </video>
+              <video
+                class="chess-slide-video"
+                src="videos/Animation-Demo.mp4"
+                muted
+                controls
+              >
+                Animation
+              </video>
+              <video
+                class="chess-slide-video"
+                src="videos/Save-Demo.mp4"
+                muted
+                controls
+              >
+                Save
+              </video>
+              <video
+                class="chess-slide-video"
+                src="videos/Reset-Undo-Demo.mp4"
+                muted
+                controls
+              >
+                Undo and Reset
+              </video>
+              <video
+                class="chess-slide-video"
+                src="videos/Pawn-Promotion-Demo.mp4"
+                muted
+                controls
+              >
+                Pawn Promotion
+              </video>
+              <button class="slides-button left">&lt;</button>
+              <button class="slides-button right">&gt;</button>
+            </div>
+          </div>
 
-                    <div class="uttt">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/ultimate-tictactoe"
-                                target="_blank"
-                                >Ultimate Tic-Tac-Toe</a
-                            >
-                        </h3>
-                        <p>
-                            An ulitmate tic-tac-toe app built from scratch (no
-                            third-party libraries) using pure Java.
-                        </p>
-                        <ul>
-                            <li>
-                                Designed and implemented the entire application
-                                independently.
-                            </li>
-                        </ul>
-                        <img src="images/ultimatettt.gif" alt="" />
-                    </div>
+          <div class="uttt">
+            <h3>
+              <a
+                href="https://github.com/dxaviud/ultimate-tictactoe"
+                target="_blank"
+                >Ultimate Tic-Tac-Toe</a
+              >
+            </h3>
+            <p>
+              An ulitmate tic-tac-toe app built from scratch (no third-party
+              libraries) using pure Java.
+            </p>
+            <ul>
+              <li>
+                Designed and implemented the entire application independently.
+              </li>
+            </ul>
+            <img src="images/ultimatettt.gif" alt="" />
+          </div>
 
-                    <div class="gol">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/conways-game-of-life"
-                                target="_blank"
-                                >Conway's Game of Life</a
-                            >
-                        </h3>
-                        <p>
-                            Conway's Game of Life simulator built from scratch
-                            (no third-party libraries) using pure Python.
-                        </p>
-                        <ul>
-                            <li>
-                                Designed and implemented the entire application
-                                independently.
-                            </li>
-                        </ul>
-                        <img src="images/gameoflife.gif" alt="" />
-                    </div>
+          <div class="gol">
+            <h3>
+              <a
+                href="https://github.com/dxaviud/conways-game-of-life"
+                target="_blank"
+                >Conway's Game of Life</a
+              >
+            </h3>
+            <p>
+              Conway's Game of Life simulator built from scratch (no third-party
+              libraries) using pure Python.
+            </p>
+            <ul>
+              <li>
+                Designed and implemented the entire application independently.
+              </li>
+            </ul>
+            <img src="images/gameoflife.gif" alt="" />
+          </div>
 
-                    <div class="minicanvas">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/mini-canvas"
-                                target="_blank"
-                                >Mini Canvas</a
-                            >
-                        </h3>
-                        <p>A simple canvas app using Python and Pillow.</p>
-                        <ul>
-                            <li>
-                                Implemented a saving feature, allowing the
-                                canvas to be saved as a PNG image.
-                            </li>
-                        </ul>
-                        <img src="images/minicanvas.gif" alt="" />
-                    </div>
+          <div class="minicanvas">
+            <h3>
+              <a href="https://github.com/dxaviud/mini-canvas" target="_blank"
+                >Mini Canvas</a
+              >
+            </h3>
+            <p>A simple canvas app using Python and Pillow.</p>
+            <ul>
+              <li>
+                Implemented a saving feature, allowing the canvas to be saved as
+                a PNG image.
+              </li>
+            </ul>
+            <img src="images/minicanvas.gif" alt="" />
+          </div>
 
-                    <div class="tetris">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/tetris"
-                                target="_blank"
-                                >Tetris</a
-                            >
-                        </h3>
-                        <p>
-                            A tetris app built from scratch (no third-party
-                            libraries) using pure C++.
-                        </p>
-                        <ul>
-                            <li>
-                                Designed and implemented the entire application
-                                independently.
-                            </li>
-                        </ul>
-                        <div class="tetris-1">
-                            <img src="images/tetris1.PNG" alt="" />
-                        </div>
-                        <div class="tetris-23">
-                            <img src="images/tetris2.PNG" alt="" />
-                            <img src="images/tetris3.PNG" alt="" />
-                        </div>
-                    </div>
+          <div class="tetris">
+            <h3>
+              <a href="https://github.com/dxaviud/tetris" target="_blank"
+                >Tetris</a
+              >
+            </h3>
+            <p>
+              A tetris app built from scratch (no third-party libraries) using
+              pure C++.
+            </p>
+            <ul>
+              <li>
+                Designed and implemented the entire application independently.
+              </li>
+            </ul>
+            <div class="tetris-1">
+              <img src="images/tetris1.PNG" alt="" />
+            </div>
+            <div class="tetris-23">
+              <img src="images/tetris2.PNG" alt="" />
+              <img src="images/tetris3.PNG" alt="" />
+            </div>
+          </div>
 
-                    <div class="checkers">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/checkers"
-                                target="_blank"
-                                >Checkers</a
-                            >
-                        </h3>
-                        <p>
-                            A checkers app built from scratch (no third-party
-                            libraries) using pure C++.
-                        </p>
-                        <ul>
-                            <li>
-                                Designed and implemented the entire application
-                                independently.
-                            </li>
-                        </ul>
-                        <img src="images/checkers1.PNG" alt="" />
-                    </div>
+          <div class="checkers">
+            <h3>
+              <a href="https://github.com/dxaviud/checkers" target="_blank"
+                >Checkers</a
+              >
+            </h3>
+            <p>
+              A checkers app built from scratch (no third-party libraries) using
+              pure C++.
+            </p>
+            <ul>
+              <li>
+                Designed and implemented the entire application independently.
+              </li>
+            </ul>
+            <img src="images/checkers1.PNG" alt="" />
+          </div>
 
-                    <div class="connect-four">
-                        <h3>
-                            <a
-                                href="https://github.com/dxaviud/connect-four"
-                                target="_blank"
-                                >Connect Four</a
-                            >
-                        </h3>
-                        <p>
-                            A connect four app built from scratch (no
-                            third-party libraries) using pure C++.
-                        </p>
-                        <ul>
-                            <li>
-                                Designed and implemented the entire application
-                                independently.
-                            </li>
-                        </ul>
-                        <img src="images/connect_four1.PNG" alt="" />
-                        <img src="images/connect_four2.PNG" alt="" />
-                    </div>
-                </div>
-            </section>
+          <div class="connect-four">
+            <h3>
+              <a href="https://github.com/dxaviud/connect-four" target="_blank"
+                >Connect Four</a
+              >
+            </h3>
+            <p>
+              A connect four app built from scratch (no third-party libraries)
+              using pure C++.
+            </p>
+            <ul>
+              <li>
+                Designed and implemented the entire application independently.
+              </li>
+            </ul>
+            <img src="images/connect_four1.PNG" alt="" />
+            <img src="images/connect_four2.PNG" alt="" />
+          </div>
+        </div>
+      </section>
 
-            <hr />
-        </main>
+      <hr />
+    </main>
 
-        <footer>
-            <section id="links">
-                <h2>Links</h2>
-                <div class="links-overlay"></div>
-                <div
-                    id="links-wrapper"
-                    class="loopback-scroller"
-                    scroller-buffer="100"
-                    title="try scrolling up or down"
-                >
-                    <a
-                        href="https://tictacreactoe.netlify.app"
-                        target="_blank"
-                        class="logo-link"
-                    >
-                        <img
-                            src="images/tictactoe-logo.png"
-                            alt="resume logo"
-                            class="logo"
-                        />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/dxaviud"
-                        target="_blank"
-                        class="logo-link"
-                    >
-                        <img
-                            src="images/linkedin-logo.png"
-                            alt="linkedin logo"
-                            class="logo"
-                        />
-                    </a>
-                    <a
-                        href="https://github.com/dxaviud"
-                        target="_blank"
-                        class="logo-link"
-                    >
-                        <img
-                            src="images/github-logo.png"
-                            alt="github logo"
-                            class="logo"
-                        />
-                    </a>
-                    <a
-                        href="mailto:d83xu@uwaterloo.com"
-                        target="_blank"
-                        class="logo-link"
-                    >
-                        <img
-                            src="images/email-logo.png"
-                            alt="email logo"
-                            class="logo"
-                        />
-                    </a>
-                    <a
-                        href="https://youtu.be/dQw4w9WgXcQ"
-                        target="_blank"
-                        class="logo-link"
-                        onclick="alert('Hehe...')"
-                    >
-                        <img
-                            src="images/youtube-logo.png"
-                            alt="youtube logo"
-                            class="logo"
-                        />
-                    </a>
-                </div>
-            </section>
-        </footer>
+    <footer>
+      <section id="links">
+        <h2>Links</h2>
+        <div class="links-overlay"></div>
+        <div
+          id="links-wrapper"
+          class="loopback-scroller"
+          scroller-buffer="100"
+          title="try scrolling up or down"
+        >
+          <a
+            href="https://tictacreactoe.netlify.app"
+            target="_blank"
+            class="logo-link"
+          >
+            <img
+              src="images/tictactoe-logo.png"
+              alt="resume logo"
+              class="logo"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dxaviud"
+            target="_blank"
+            class="logo-link"
+          >
+            <img
+              src="images/linkedin-logo.png"
+              alt="linkedin logo"
+              class="logo"
+            />
+          </a>
+          <a
+            href="https://github.com/dxaviud"
+            target="_blank"
+            class="logo-link"
+          >
+            <img src="images/github-logo.png" alt="github logo" class="logo" />
+          </a>
+          <a
+            href="mailto:d83xu@uwaterloo.com"
+            target="_blank"
+            class="logo-link"
+          >
+            <img src="images/email-logo.png" alt="email logo" class="logo" />
+          </a>
+          <a
+            href="https://youtu.be/dQw4w9WgXcQ"
+            target="_blank"
+            class="logo-link"
+            onclick="alert('Hehe...')"
+          >
+            <img
+              src="images/youtube-logo.png"
+              alt="youtube logo"
+              class="logo"
+            />
+          </a>
+        </div>
+      </section>
+    </footer>
 
-        <div id="like-button-container"></div>
-    </body>
+    <div id="like-button-container"></div>
+  </body>
 </html>
