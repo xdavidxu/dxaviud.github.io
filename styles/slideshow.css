@@ -1,0 +1,37 @@
+.slideshow > div > h3 {
+  margin: 0 auto;
+}
+
+.slideshow > div > h3 > img {
+  background-color: white;
+  width: max(15%, 75px);
+  border-radius: 15px;
+}
+
+.slideshow ul {
+  padding-left: 2em;
+  padding-right: 1em;
+}
+
+.slideshow > div > p {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+@media (max-width: 800px) {
+  .slideshow li {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 420px) {
+  .slideshow li {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 280px) {
+  .slideshow li {
+    font-size: 0.65em;
+  }
+}

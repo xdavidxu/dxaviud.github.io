@@ -1,17 +1,17 @@
 {
-    "name": "dxaviud.github.io",
-    "version": "1.0.0",
-    "description": "My portfolio website (https://dxaviud.github.io/).",
-    "main": "index.js",
-    "scripts": {
-        "babel": "npx babel --watch react-components -d scripts --presets react-app/prod",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "David Xu",
-    "license": "ISC",
-    "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-preset-react-app": "^3.1.2"
-    }
+  "name": "dxaviud.github.io",
+  "version": "1.0.0",
+  "description": "My portfolio website (https://dxaviud.github.io/).",
+  "main": "index.js",
+  "scripts": {
+    "babel": "npx babel --watch react-components -d scripts --presets react-app/prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "David Xu",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
 }

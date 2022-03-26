@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/menu.css" />
     <link rel="stylesheet" href="styles/theme-picker.css" />
+    <link rel="stylesheet" href="styles/slideshow.css" />
     <link id="theme-color" rel="stylesheet" href="styles/none.css" />
 
     <!--JavaScript-->
@@ -117,7 +118,7 @@
           <div
             class="typewrite"
             text-prefix="Hi, I'm David Xu, "
-            text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "a master of all trades, jack of none.", "how are you today?", "do you even VIM bro?"]'
+            text-array='["a Software Engineering student.", "a Full Stack developer.", "a Badminton enthusiast.", "a human?", "a master of all trades, jack of none.", "how are you today?", "do you even vim bro?"]'
             rotate-period="2000"
           ></div>
         </div>
@@ -127,32 +128,62 @@
 
       <section id="work">
         <h2>Work</h2>
-        <div>
-          <h3 id="jaggedxy-h3">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/574da12101dbaea28965f237/1603376296689-4MB7IU8BT93L4S5KD1UY/JaggedXY+transparent.png?format=300w"
-              alt="JaggedXY Logo"
-            />
-          </h3>
-          <ul>
-            <li>
-              Designed and implemented multiple syntaxes in OEScript by
-              modifying the grammar and implementing node reductions and code
-              generation, abstracting and speeding up the data definition
-              process by about 10x.
-            </li>
-            <li>
-              Built various methods for sending and receiving data by
-              implementing algorithms for encoding and decoding binary of
-              different data types, speeding up inter‑process communication.
-            </li>
-            <li>
-              Designed, implemented, and refactored custom user controls in the
-              front‑end library to build a new client.
-            </li>
-          </ul>
-          <p>Contact me for more info.</p>
+        <div class="slideshow" min-height="69vh">
+          <div>
+            <h3 id="bitgo-h3">
+              <img
+                src="https://www.jobsinforex.com/files/pictures/bitgo_logo.png"
+                alt="BitGo Logo"
+              />
+            </h3>
+            <ul>
+              <li>
+                Implemented MongoDB Change Streams for BitGo’s database to
+                synchronize it in real time with Lumina’s PostgreSQL database,
+                completely replacing the slower and less maintainable RabbitMQ
+                system.
+              </li>
+              <li>
+                Designed and implemented a robust GraphQL query resolver for
+                calculating a user’s total portfolio value to be displayed on
+                the frontend, enabling a feature highly desired by customers
+              </li>
+              <li>
+                Setup Google Analytics 4 and integrated it with TypeScript and
+                React.js on the new frontend to track customer usage of various
+                features, providing us insight on how to improve our app.
+              </li>
+              <li>...</li>
+            </ul>
+          </div>
+          <div>
+            <h3 id="jaggedxy-h3">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/574da12101dbaea28965f237/1603376296689-4MB7IU8BT93L4S5KD1UY/JaggedXY+transparent.png?format=300w"
+                alt="JaggedXY Logo"
+              />
+            </h3>
+            <ul>
+              <li>
+                Built new features for JaggedXY’s scripting language by
+                modifying the language grammar and implementing node reductions
+                and code generation, abstracting and speeding up data definition
+                by roughly eightfold.
+              </li>
+              <li>
+                Refactored thousands of lines of code to use new features I
+                developed, improving efficiency and robustness.
+              </li>
+              <li>
+                Configured deployments for JaggedXY’s national telecom
+                customers, including some of the largest Tier 1 carriers in
+                Canada and the USA.
+              </li>
+              <li>...</li>
+            </ul>
+          </div>
         </div>
+        <p>Contact me for more info.</p>
       </section>
 
       <hr />
@@ -526,7 +557,7 @@
             href="https://youtu.be/dQw4w9WgXcQ"
             target="_blank"
             class="logo-link"
-            onclick="alert('Hehe...')"
+            onclick="alert('B)')"
           >
             <img
               src="images/youtube-logo.png"
