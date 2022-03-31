@@ -20,6 +20,8 @@ let arlsLeftButton = document.querySelector(".arls-slides .slides-button.left");
 let arlsRightButton = document.querySelector(
   ".arls-slides .slides-button.right"
 );
+arlsLeftButton.style.borderRadius = "8px";
+arlsRightButton.style.borderRadius = "8px";
 arlsLeftButton.addEventListener("click", function () {
   changeImage(-1);
 });
@@ -61,6 +63,8 @@ let chessLeftButton = document.querySelector(
 let chessRightButton = document.querySelector(
   ".chess-slides .slides-button.right"
 );
+chessLeftButton.style.borderRadius = "8px";
+chessRightButton.style.borderRadius = "8px";
 chessLeftButton.addEventListener("click", function () {
   changeVideo(-1);
 });

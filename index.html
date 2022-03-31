@@ -113,7 +113,7 @@
       </section>
 
       <section id="about">
-        <h2>About</h2>
+        <h2 class="flex-center-one"><span>About</span></h2>
         <div id="about-wrapper" class="flex-center-one">
           <div
             class="typewrite"
@@ -127,7 +127,7 @@
       <hr />
 
       <section id="work">
-        <h2>Work</h2>
+        <h2 class="flex-center-one"><span>Work</span></h2>
         <div class="slideshow" min-height="69vh">
           <div>
             <h3 id="bitgo-h3">
@@ -138,15 +138,15 @@
             </h3>
             <ul>
               <li>
-                Implemented MongoDB Change Streams for BitGo’s database to
-                synchronize it in real time with Lumina’s PostgreSQL database,
+                Implemented MongoDB Change Streams to synchronize BitGo’s
+                MongoDB database in real time with Lumina’s PostgreSQL database,
                 completely replacing the slower and less maintainable RabbitMQ
                 system.
               </li>
               <li>
                 Designed and implemented a robust GraphQL query resolver for
                 calculating a user’s total portfolio value to be displayed on
-                the frontend, enabling a feature highly desired by customers
+                the frontend, enabling a feature highly desired by customers.
               </li>
               <li>
                 Setup Google Analytics 4 and integrated it with TypeScript and
@@ -189,9 +189,30 @@
       <hr />
 
       <section id="projects">
-        <h2>Projects</h2>
-
+        <h2 class="flex-center-one"><span>Projects</span></h2>
         <div class="slideshow" min-height="69vh">
+          <div>
+            <h3>
+              <a href="https://github.com/dxaviud/dbjson" target="_blank"
+                >Php-todolist</a
+              >
+            </h3>
+            <p>A todolist webapp.</p>
+            <ul>
+              <li>
+                Built and deployed a full stack CRUD app with user auth and a
+                clean UI, backed by a PostgreSQL database.
+              </li>
+            </ul>
+            <p>
+              <a
+                href="http://phptodolist-env-1.eba-7qkqyyb3.us-east-2.elasticbeanstalk.com/"
+                target="_blank"
+                >Deployed</a
+              >
+              to AWS Elastic Beanstalk.
+            </p>
+          </div>
           <div>
             <h3>
               <a href="https://github.com/dxaviud/dbjson" target="_blank"
@@ -199,17 +220,13 @@
               >
             </h3>
             <p>
-              A (very slim) DBMS for Node.js that uses JSON files to store data.
-              Designed to be very easy to use and inspired by Redis.
+              A small database/cache for Node.js that uses JSON files to store
+              data.
             </p>
             <ul>
               <li>
-                Managed directories and JSON files to store, retrieve, update,
-                and delete database data efficiently.
-              </li>
-              <li>
-                Implemented a cache system to rapidly retrieve previously
-                queried, updated, or created data.
+                Managed the file system to read, update, delete, and insert data
+                efficiently using a cache system.
               </li>
             </ul>
             <p>
@@ -230,8 +247,8 @@
             <p>Tic-tac-toe with React's color theme.</p>
             <ul>
               <li>
-                Rewrote React’s official tutorial by fixing bugs, improving
-                appearance, and adding extra features.
+                Rebuilt React’s tic‑tac‑toe tutorial by fixing bugs, improving
+                appearance, and adding more features.
               </li>
             </ul>
             <p>
@@ -247,11 +264,15 @@
                 >Bug Tracker</a
               >
             </h3>
-            <p>A bug tracker Flask app using a PostgreSQL database.</p>
+            <p>(Incomplete) A bug tracker webapp.</p>
             <ul>
               <li>
-                Setup endpoints and populated HTML templates to send in HTTP
-                responses.
+                Built and deployed a full stack app backed by a PostgreSQL
+                database.
+              </li>
+              <li>
+                Setup endpoints and populated HTML templates with Jinja2 to send
+                in HTTP responses.
               </li>
               <li>
                 Used an ORM (SQLAlchemy) to query and update the database.
@@ -274,21 +295,21 @@
               >
             </h3>
             <p>
-              The software component to an intelligent lock that detects mask
-              usage and calculates physical distances between people.
+              The software component to an smart lock that detects mask usage
+              and computes physical distance between people.
             </p>
             <ul>
-              <li>
-                Took leadership by coordinating the team to build the project
-                efficiently and on time.
-              </li>
               <li>
                 Designed and implemented the main application and integrated
                 computer vision and machine learning code.
               </li>
               <li>
-                Derived and implemented distance calculation algorithms for
-                images.
+                Derived and implemented distance approximation algorithms for
+                objects in images.
+              </li>
+              <li>
+                Took leadership by coordinating the team to build the project
+                efficiently and on time.
               </li>
             </ul>
             <div class="arls-slides">
@@ -315,19 +336,12 @@
                 >Chess</a
               >
             </h3>
-            <p>
-              A chess app built from scratch (no third-party libraries) using
-              pure Java.
-            </p>
+            <p>A chess app built from scratch (no third-party libraries).</p>
             <ul>
               <li>
-                Designed and implemented the entire application independently.
+                Implemented piece movement, move validation, and checkmate
+                verification algorithms along with a GUI.
               </li>
-              <li>
-                Developed and implemented chess piece movement, move validation,
-                and checkmate checking algorithms.
-              </li>
-              <li>Designed and created a GUI with movement animations.</li>
             </ul>
             <h4 id="demo">Feature demos</h4>
             <div class="chess-slides">
@@ -395,13 +409,8 @@
             </h3>
             <p>
               An ulitmate tic-tac-toe app built from scratch (no third-party
-              libraries) using pure Java.
+              libraries).
             </p>
-            <ul>
-              <li>
-                Designed and implemented the entire application independently.
-              </li>
-            </ul>
             <img src="images/ultimatettt.gif" alt="" />
           </div>
 
@@ -415,13 +424,8 @@
             </h3>
             <p>
               Conway's Game of Life simulator built from scratch (no third-party
-              libraries) using pure Python.
+              libraries).
             </p>
-            <ul>
-              <li>
-                Designed and implemented the entire application independently.
-              </li>
-            </ul>
             <img src="images/gameoflife.gif" alt="" />
           </div>
 
@@ -447,15 +451,7 @@
                 >Tetris</a
               >
             </h3>
-            <p>
-              A tetris app built from scratch (no third-party libraries) using
-              pure C++.
-            </p>
-            <ul>
-              <li>
-                Designed and implemented the entire application independently.
-              </li>
-            </ul>
+            <p>A tetris app built from scratch (no third-party libraries).</p>
             <div class="tetris-1">
               <img src="images/tetris1.PNG" alt="" />
             </div>
@@ -471,15 +467,7 @@
                 >Checkers</a
               >
             </h3>
-            <p>
-              A checkers app built from scratch (no third-party libraries) using
-              pure C++.
-            </p>
-            <ul>
-              <li>
-                Designed and implemented the entire application independently.
-              </li>
-            </ul>
+            <p>A checkers app built from scratch (no third-party libraries).</p>
             <img src="images/checkers1.PNG" alt="" />
           </div>
 
@@ -490,14 +478,8 @@
               >
             </h3>
             <p>
-              A connect four app built from scratch (no third-party libraries)
-              using pure C++.
+              A connect four app built from scratch (no third-party libraries).
             </p>
-            <ul>
-              <li>
-                Designed and implemented the entire application independently.
-              </li>
-            </ul>
             <img src="images/connect_four1.PNG" alt="" />
             <img src="images/connect_four2.PNG" alt="" />
           </div>
@@ -509,7 +491,7 @@
 
     <footer>
       <section id="links">
-        <h2>Links</h2>
+        <h2 class="flex-center-one"><span>Links</span></h2>
         <div class="links-overlay"></div>
         <div
           id="links-wrapper"
@@ -522,9 +504,16 @@
             target="_blank"
             class="logo-link"
           >
+            <img src="images/todolist.png" alt="todolist logo" class="logo" />
+          </a>
+          <a
+            href="https://tictacreactoe.netlify.app"
+            target="_blank"
+            class="logo-link"
+          >
             <img
               src="images/tictactoe-logo.png"
-              alt="resume logo"
+              alt="tic-tac-toe logo"
               class="logo"
             />
           </a>
