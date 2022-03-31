@@ -6,9 +6,11 @@ welcomeh2.classList.add("fade-in", "expand");
 const toggler = document.querySelector(".toggler");
 
 // this takes advantage of event delegation (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-const menuItemsList = document.querySelector("ul.menu-items-list");
-menuItemsList.addEventListener("click", function () {
-  toggler.click();
+const menuItems = document.querySelectorAll("ul.menu-items-list a");
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener("click", function () {
+    toggler.click();
+  });
 });
 
 // Anti-Rona Lock System slides
