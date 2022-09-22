@@ -24,7 +24,6 @@ for (const slideshow of slideshows) {
 
   const leftButton = document.createElement("button");
   leftButton.setAttribute("slideshow-button", "true");
-  leftButton.textContent = "<";
   leftButton.addEventListener("click", () => {
     hideChildren(slides, (child) => !child.hasAttribute("slideshow-button"));
     do {
@@ -37,7 +36,6 @@ for (const slideshow of slideshows) {
   styleSlideshowBtn(leftButton);
   const rightButton = document.createElement("button");
   rightButton.setAttribute("slideshow-button", "true");
-  rightButton.textContent = ">";
   rightButton.addEventListener("click", () => {
     hideChildren(slides, (child) => !child.hasAttribute("slideshow-button"));
     do {
@@ -62,6 +60,11 @@ function hideChildren(children, filter) {
   }
 }
 
+const primaryColor = () =>
+  getComputedStyle(document.querySelector(":root")).getPropertyValue(
+    "--primary-color"
+  ) || "orange";
+
 function styleSlideshowBtn(btn) {
   btn.style.position = "absolute";
   btn.style.width = "max(10%, 50px)";
@@ -76,13 +79,17 @@ function styleSlideshowBtn(btn) {
   btn.style.cursor = "pointer";
   btn.addEventListener("mouseover", () => {
     btn.style.opacity = "1";
-    btn.style.color =
-      getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--primary-color"
-      ) || "orange";
+    btn.style.color = primaryColor();
   });
   btn.addEventListener("mouseout", () => {
     btn.style.opacity = "0.5";
     btn.style.color = "black";
+    btn.style.backgroundColor = "white";
+  });
+  btn.addEventListener("mousedown", () => {
+    btn.style.backgroundColor = primaryColor();
+  });
+  btn.addEventListener("mouseup", () => {
+    btn.style.backgroundColor = "white";
   });
 }

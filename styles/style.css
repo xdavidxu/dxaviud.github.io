@@ -426,6 +426,11 @@ video,
   width: var(--width-threshold);
 }
 
+.image-link:hover {
+  transition: 0.2s ease-out;
+  outline: 0.4em solid var(--primary-color);
+}
+
 @media (max-width: 800px) {
   /*Can't use var in media queries, make sure to change this if you change the --width-threshold variable*/
   .arls-slides img {
