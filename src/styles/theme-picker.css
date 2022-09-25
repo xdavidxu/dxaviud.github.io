@@ -1,0 +1,42 @@
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* .circle:hover {
+  transform: scale(1.2);
+} */
+
+.circle.default-theme {
+  background-color: #0395de;
+}
+
+.circle.aquamarine-theme {
+  background-color: aquamarine;
+}
+
+.circle.crimson-theme {
+  background-color: crimson;
+}
+
+.circle.gold-theme {
+  background-color: gold;
+}
+
+.theme-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 150px;
+  width: 40px;
+  z-index: 1; /* otherwise doesn't work when overlapping with h2 */
+}

@@ -1,0 +1,481 @@
+:root {
+  --primary-color: #0395de;
+  --overlay-color: rgba(25, 40, 50, 0.85);
+  --background-color: rgba(25, 25, 25, 1);
+  --odd-color: rgba(35, 35, 35, 1);
+  --menu-speed: 0.75s;
+  --width-threshold: 800px;
+  --section-min-height: 100vh;
+  --h2-height: 2.66em;
+}
+
+/* refactor */
+header {
+  padding-top: 20px;
+  height: 85px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* refactor */
+body {
+  background-color: var(--background-color);
+  color: white;
+  font-size: 18px;
+  font-family: "Cambria", Cambria;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin: 0 auto;
+  padding: 0;
+  font-size: 60px;
+  text-align: center;
+  vertical-align: center;
+  letter-spacing: 5px;
+  transition: 0.4s ease;
+  width: fit-content;
+}
+
+h1 a {
+  color: var(--primary-color);
+  transition: 0.6s ease;
+}
+
+#top > a {
+  text-decoration: none;
+  color: lightgray;
+  transition: color 0.4s ease;
+}
+
+#top > a:hover {
+  color: var(--primary-color);
+}
+
+/* refactor */
+h2 {
+  font-size: 50px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+/* refactor */
+h3 {
+  font-size: 40px;
+  transition: 0.4s ease;
+  margin-top: 20px;
+}
+
+h3 a:link,
+h3 a:visited {
+  color: var(--primary-color);
+  transition: 0.6s ease;
+}
+
+h2:hover {
+  transition: 0.4s ease;
+  transform: translateY(-8px);
+}
+
+h2,
+h3 {
+  max-width: var(--witdh-threshold);
+  margin: 0.83em auto;
+}
+
+section {
+  overflow: hidden;
+  min-height: var(--section-min-height);
+}
+
+section > h2 {
+  height: var(--h2-height);
+  line-height: var(--h2-height);
+  margin: 0 auto;
+}
+
+#welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("../images/default-background.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  margin-bottom: 50px;
+  overflow: hidden;
+  transition: 0.6s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+#welcome h2 {
+  font-size: 3em;
+  letter-spacing: 0.25em;
+  vertical-align: middle;
+  font-weight: 900;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.last-name-letter {
+  color: darkmagenta;
+}
+
+/* refactor */
+#about {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* refactor */
+#about p {
+  font-size: larger;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+/* refactor */
+#about-wrapper {
+  height: 75vh;
+}
+
+/* refactor */
+#about-wrapper > div {
+  margin-bottom: 10vh;
+}
+
+/* refactor */
+#projects {
+  padding-bottom: 80px;
+}
+
+/* refactor */
+#projects p {
+  margin-bottom: 45px;
+}
+
+#projects ul,
+#work ul {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--width-threshold);
+}
+
+/* refactor */
+#projects > div {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+p,
+li {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+h3 ~ p {
+  font-size: 20px;
+  font-style: italic;
+  max-width: var(--width-threshold);
+  margin: auto;
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 10px;
+}
+
+hr {
+  border: none;
+  height: 10px;
+  width: 50%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  transition: 0.6s ease;
+}
+
+/* refactor */
+footer {
+  padding-top: 20px;
+  height: 100px;
+}
+
+h2 > span {
+  position: absolute;
+}
+
+h2 > span::before {
+  content: "#";
+  position: absolute;
+  left: -0.75em;
+  opacity: 0;
+  color: var(--primary-color);
+}
+
+h2:hover > span::before {
+  transition: 0.6s ease;
+  opacity: 1;
+}
+
+a,
+a:visited {
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bug-tracker a {
+  color: var(--primary-color);
+}
+
+.arls-slide-img {
+  margin: 0 auto;
+}
+
+/* refactor */
+.chess {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* refactor */
+#demo {
+  font-size: 28px;
+}
+
+.chess-slide-video {
+  margin: 0 auto;
+}
+
+/* refactor */
+.chess-slides {
+  padding-bottom: 50px;
+}
+
+.slides-button {
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: bold;
+  width: 80px;
+  height: 40px;
+  font-size: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.slides-button:hover {
+  opacity: 0.8;
+}
+
+/* what does this do? */
+.slides-button:focus {
+  outline: none;
+}
+
+/* refactor */
+.tetris {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* refactor */
+.tetris img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* refactor */
+.tetris-23 img {
+  vertical-align: top;
+}
+
+/* refactor */
+.connect-four img {
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* refactor */
+.ttt img {
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* refactor */
+.adder img {
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* refactor */
+.tps img {
+  max-width: 800px;
+}
+
+/* refactor */
+#contact {
+  height: auto;
+}
+
+/* refactor */
+#contact img {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+#links {
+  --links-height: 60vh;
+  position: relative;
+}
+
+#links > * {
+  width: 100%;
+}
+
+.links-overlay {
+  /* width: 100%;
+    height: 100%; */
+  height: var(--links-height);
+  position: absolute;
+  top: calc(
+    (var(--section-min-height) + var(--h2-height) - var(--links-height)) / 2
+  );
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    var(--background-color) 0%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    var(--background-color) 100%
+  );
+  pointer-events: none; /* so the text is still selectable */
+  z-index: 1;
+}
+
+#links-wrapper {
+  --logo-dimension: 100px;
+  height: var(--links-height);
+  position: absolute;
+  top: calc(
+    (var(--section-min-height) + var(--h2-height) - var(--links-height)) / 2
+  );
+  left: 0;
+  overscroll-behavior: contain;
+  cursor: all-scroll;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+#links-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.logo-link {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--logo-dimension);
+  margin-top: var(--logo-dimension);
+  margin-bottom: var(--logo-dimension);
+}
+
+.logo {
+  width: var(--logo-dimension);
+  height: var(--logo-dimension);
+  border: none;
+  transition: 0.4s ease;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}
+
+.logo:hover {
+  transition: 0.4s ease;
+  transform: scale(1.2);
+}
+
+.arls-slides img {
+  height: var(--width-threshold);
+}
+
+/* refactor */
+.chess img,
+.chess-slide-video,
+.uttt img,
+.gol img,
+.minicanvas img,
+video,
+.tps img {
+  width: var(--width-threshold);
+}
+
+.image-link:hover {
+  transition: 0.2s ease-out;
+  outline: 0.4em solid var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  /*Can't use var in media queries, make sure to change this if you change the --width-threshold variable*/
+  .arls-slides img {
+    height: auto;
+  }
+
+  .arls-slides img,
+  .chess img,
+  .chess-slide-video,
+  .uttt img,
+  .gol img,
+  .minicanvas img,
+  video,
+  .tps img {
+    width: 100%;
+  }
+
+  #welcome h2 {
+    font-size: 1.3em;
+  }
+
+  #about p {
+    font-size: large;
+  }
+
+  hr {
+    height: 5px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 40px;
+    transform: translateX(20px);
+  }
+}
