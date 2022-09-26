@@ -9,10 +9,6 @@
   transition: all 0.3s ease;
 }
 
-/* .circle:hover {
-  transform: scale(1.2);
-} */
-
 .circle.default-theme {
   background-color: #0395de;
 }
