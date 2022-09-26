@@ -1,6 +1,11 @@
-const slideshows = document.getElementsByClassName("slideshow");
+export {};
 
-for (const slideshow of slideshows) {
+const slideshows = document.getElementsByClassName(
+  "slideshow"
+) as HTMLCollectionOf<HTMLElement>;
+
+for (let j = 0; j < slideshows.length; ++j) {
+  const slideshow = slideshows[j];
   slideshow.style.position = "relative";
   slideshow.style.width = "min(100%, 1200px)";
   slideshow.style.height = "auto";
@@ -9,8 +14,9 @@ for (const slideshow of slideshows) {
   slideshow.style.marginRight = "auto";
   slideshow.style.overflow = "hidden";
 
-  const slides = slideshow.children;
-  for (const slide of slides) {
+  const slides = slideshow.children as HTMLCollectionOf<HTMLElement>;
+  for (let k = 0; k < slides.length; ++k) {
+    const slide = slides[k];
     slide.style.width = "100%";
     slide.style.height = "auto";
     slide.style.marginLeft = "auto";
@@ -52,8 +58,12 @@ for (const slideshow of slideshows) {
   console.log("Slideshow initialized");
 }
 
-function hideChildren(children, filter) {
-  for (const child of children) {
+function hideChildren(
+  children: HTMLCollectionOf<HTMLElement>,
+  filter: (e: HTMLElement) => boolean
+) {
+  for (let j = 0; j < children.length; ++j) {
+    const child = children[j];
     if (filter(child)) {
       child.style.display = "none";
     }
@@ -61,11 +71,11 @@ function hideChildren(children, filter) {
 }
 
 const primaryColor = () =>
-  getComputedStyle(document.querySelector(":root")).getPropertyValue(
+  getComputedStyle(document.querySelector(":root")!).getPropertyValue(
     "--primary-color"
   ) || "orange";
 
-function styleSlideshowBtn(btn) {
+function styleSlideshowBtn(btn: HTMLButtonElement) {
   btn.style.position = "absolute";
   btn.style.width = "max(10%, 50px)";
   btn.style.aspectRatio = "1/1";

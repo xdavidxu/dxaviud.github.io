@@ -1,7 +1,13 @@
-const scrollers = document.getElementsByClassName("loopback-scroller");
-for (const scroller of scrollers) {
+export {};
+
+const scrollers = document.getElementsByClassName(
+  "loopback-scroller"
+) as HTMLCollectionOf<HTMLElement>;
+for (let i = 0; i < scrollers.length; ++i) {
+  const scroller = scrollers[i];
   let n = scroller.children.length;
-  const buffer = parseInt(scroller.getAttribute("scroller-buffer"), 10) || 100;
+  const scrollerBuffer = scroller.getAttribute("scroller-buffer");
+  const buffer = scrollerBuffer ? parseInt(scrollerBuffer, 10) : 100;
 
   scroller.scrollTo(0, (scroller.scrollHeight - scroller.clientHeight) / 2);
 
@@ -14,6 +20,12 @@ for (const scroller of scrollers) {
     scroller.appendChild(scroller.children[0].cloneNode(true));
     scroller.appendChild(scroller.children[0].cloneNode(true));
     n = 2; // pretend there was originally 2 children
+  }
+
+  const children = scroller.children as HTMLCollectionOf<HTMLElement>;
+  for (let i = 0; i < children.length; ++i) {
+    const child = children[i];
+    child.style.userSelect = "none";
   }
 
   scroller.addEventListener("scroll", () => {

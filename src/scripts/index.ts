@@ -1,9 +1,10 @@
+export {};
+
 // On load
-let welcomeh2 = document.querySelector("#welcome h2");
-welcomeh2.classList.add("fade-in", "expand");
+document.querySelector("#welcome h2")?.classList?.add("fade-in", "expand");
 
 // Hamburger menu
-const toggler = document.querySelector(".toggler");
+const toggler = document.querySelector(".toggler") as HTMLElement;
 
 // this takes advantage of event delegation (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 const menuItems = document.querySelectorAll("ul.menu-items-list a");
@@ -15,13 +16,17 @@ menuItems.forEach((menuItem) => {
 
 // Anti-Rona Lock System slides
 let arlsSlideIndex = 0;
-let arlsSlides = document.getElementsByClassName("arls-slide-img");
+let arlsSlides = document.getElementsByClassName(
+  "arls-slide-img"
+) as HTMLCollectionOf<HTMLImageElement>;
 showImage();
 
-let arlsLeftButton = document.querySelector(".arls-slides .slides-button.left");
+let arlsLeftButton = document.querySelector(
+  ".arls-slides .slides-button.left"
+) as HTMLButtonElement;
 let arlsRightButton = document.querySelector(
   ".arls-slides .slides-button.right"
-);
+) as HTMLButtonElement;
 arlsLeftButton.style.borderRadius = "8px";
 arlsRightButton.style.borderRadius = "8px";
 arlsLeftButton.addEventListener("click", function () {
@@ -31,10 +36,7 @@ arlsRightButton.addEventListener("click", function () {
   changeImage(+1);
 });
 
-function changeImage(delta) {
-  if (Math.abs(delta) != 1) {
-    throw "Error: delta not 1 or -1";
-  }
+function changeImage(delta: -1 | 1) {
   arlsSlideIndex += delta;
   if (arlsSlideIndex > arlsSlides.length - 1) {
     arlsSlideIndex = 0;
@@ -50,21 +52,26 @@ function showImage() {
   }
   arlsSlides[arlsSlideIndex].style.display = "block";
 
-  let arlsTitle = document.getElementById("arls-slide-title");
+  const arlsTitle = document.getElementById("arls-slide-title");
+  if (arlsTitle == null) {
+    return;
+  }
   arlsTitle.textContent = arlsSlides[arlsSlideIndex].alt;
 }
 
 // Chess demo slides
 let chessSlideIndex = 0;
-let chessSlides = document.getElementsByClassName("chess-slide-video");
+let chessSlides = document.getElementsByClassName(
+  "chess-slide-video"
+) as HTMLCollectionOf<HTMLVideoElement>;
 showVideo();
 
 let chessLeftButton = document.querySelector(
   ".chess-slides .slides-button.left"
-);
+) as HTMLButtonElement;
 let chessRightButton = document.querySelector(
   ".chess-slides .slides-button.right"
-);
+) as HTMLButtonElement;
 chessLeftButton.style.borderRadius = "8px";
 chessRightButton.style.borderRadius = "8px";
 chessLeftButton.addEventListener("click", function () {
@@ -74,10 +81,7 @@ chessRightButton.addEventListener("click", function () {
   changeVideo(+1);
 });
 
-function changeVideo(delta) {
-  if (Math.abs(delta) != 1) {
-    throw "Error: delta not 1 or -1";
-  }
+function changeVideo(delta: -1 | 1) {
   chessSlideIndex += delta;
   if (chessSlideIndex > chessSlides.length - 1) {
     chessSlideIndex = 0;
@@ -94,13 +98,16 @@ function showVideo() {
   }
   chessSlides[chessSlideIndex].style.display = "block";
 
-  let title = document.getElementById("chess-slide-title");
+  const title = document.getElementById("chess-slide-title");
+  if (title == null) {
+    return;
+  }
   title.textContent = chessSlides[chessSlideIndex].textContent;
 }
 
 document.querySelectorAll("h2").forEach((h2) => {
   h2.onclick = function () {
-    const id = this.parentElement.getAttribute("id");
+    const id = h2.parentElement?.getAttribute("id");
     console.log("location: " + window.location);
     window.location.href = "#" + id;
   };
