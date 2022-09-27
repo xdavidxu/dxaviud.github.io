@@ -3,6 +3,8 @@
 # abort on errors
 set -e
 
+rm -rf dist
+
 # build
 npm run build
 
@@ -29,4 +31,3 @@ git push -f git@github.com:dxaviud/dxaviud.github.io.git deploy
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
 
 cd ..
-rm -rf dist
