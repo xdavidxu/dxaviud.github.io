@@ -3,7 +3,7 @@ import { setBackgroundColor, setTextColor } from "./css-vars";
 const lightSwitch = document.getElementById("light-switch") as HTMLDivElement;
 lightSwitch.textContent = "Light";
 lightSwitch.style.right = "5em";
-lightSwitch.style.top = "50%";
+lightSwitch.style.top = "45%";
 lightSwitch.style.color = "var(--text-color)";
 lightSwitch.style.backgroundColor = "var(--primary-color)";
 lightSwitch.style.height = "2em";
@@ -30,18 +30,38 @@ lightSwitch.addEventListener("mouseout", () => {
 });
 lightSwitch.addEventListener("click", () => {
   if (lightSwitch.textContent == "Dark") {
-    lightSwitch.textContent = "Light";
-    lightSwitch.style.backgroundColor = "white";
-    setBackgroundColor("rgba(25, 25, 25, 1)");
-    setTextColor("white");
-    welcome.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    lightOff();
   } else {
-    lightSwitch.textContent = "Dark";
-    lightSwitch.style.backgroundColor = "black";
-    setBackgroundColor("rgba(230, 230, 230, 1)");
-    setTextColor("black");
-    welcome.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    lightOn();
   }
 });
 
+const lightOff = () => {
+  lightSwitch.textContent = "Light";
+  lightSwitch.style.backgroundColor = "white";
+  setBackgroundColor("rgba(25, 25, 25, 1)");
+  setTextColor("white");
+  welcome.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  localStorage.lightState = "off";
+};
+
+const lightOn = () => {
+  lightSwitch.textContent = "Dark";
+  lightSwitch.style.backgroundColor = "black";
+  setBackgroundColor("rgba(230, 230, 230, 1)");
+  setTextColor("black");
+  welcome.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+  localStorage.lightState = "on";
+};
+
 const welcome = document.getElementById("welcome") as HTMLElement;
+
+if ("lightState" in localStorage) {
+  if (localStorage.lightState == "on") {
+    lightOn();
+  } else {
+    lightOff();
+  }
+} else {
+  localStorage.lightState = "off";
+}
