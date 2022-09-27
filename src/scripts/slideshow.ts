@@ -1,4 +1,4 @@
-export {};
+import { primaryColor } from "./css-vars";
 
 const slideshows = document.getElementsByClassName(
   "slideshow"
@@ -70,11 +70,6 @@ function hideChildren(
   }
 }
 
-const primaryColor = () =>
-  getComputedStyle(document.querySelector(":root")!).getPropertyValue(
-    "--primary-color"
-  ) || "orange";
-
 function styleSlideshowBtn(btn: HTMLButtonElement) {
   btn.style.position = "absolute";
   btn.style.width = "max(10%, 50px)";
@@ -84,22 +79,20 @@ function styleSlideshowBtn(btn: HTMLButtonElement) {
   btn.style.fontSize = "x-large";
   btn.style.fontWeight = "1000";
   btn.style.border = "none";
-  btn.style.backgroundColor = "white";
+  btn.style.backgroundColor = "var(--text-color)";
   btn.style.opacity = "0.5";
   btn.style.cursor = "pointer";
   btn.addEventListener("mouseover", () => {
     btn.style.opacity = "1";
-    btn.style.color = primaryColor();
   });
   btn.addEventListener("mouseout", () => {
     btn.style.opacity = "0.5";
-    btn.style.color = "black";
-    btn.style.backgroundColor = "white";
+    btn.style.backgroundColor = "var(--text-color)";
   });
   btn.addEventListener("mousedown", () => {
     btn.style.backgroundColor = primaryColor();
   });
   btn.addEventListener("mouseup", () => {
-    btn.style.backgroundColor = "white";
+    btn.style.backgroundColor = "var(--text-color)";
   });
 }

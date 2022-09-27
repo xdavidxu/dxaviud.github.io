@@ -2,6 +2,7 @@ import defaultBackground from "/images/default-background.jpg";
 import aquamarineBackground from "/images/aquamarine-background.jpg";
 import crimsonBackground from "/images/crimson-background.jpg";
 import goldBackground from "/images/gold-background.jpg";
+import { setPrimaryColor } from "./css-vars";
 
 const circles = document.getElementsByClassName(
   "circle"
@@ -22,28 +23,23 @@ for (let i = 0; i < circles.length; i++) {
 }
 
 function changeTheme(theme: string) {
-  const root = document.querySelector(":root") as HTMLElement;
   const welcome = document.getElementById("welcome");
-  if (root == null) {
-    console.log("couldn't query :root");
-    return;
-  }
   if (welcome == null) {
     console.log("couldn't query welcome");
     return;
   }
   currentTheme = theme;
   if (theme == "default") {
-    root.style.setProperty("--primary-color", "#0395de");
+    setPrimaryColor("#0395de");
     welcome.style.backgroundImage = `url("${defaultBackground}")`;
   } else if (theme == "aquamarine") {
-    root.style.setProperty("--primary-color", "aquamarine");
+    setPrimaryColor("aquamarine");
     welcome.style.backgroundImage = `url("${aquamarineBackground}")`;
   } else if (theme == "crimson") {
-    root.style.setProperty("--primary-color", "crimson");
+    setPrimaryColor("crimson");
     welcome.style.backgroundImage = `url("${crimsonBackground}")`;
   } else if (theme == "gold") {
-    root.style.setProperty("--primary-color", "gold");
+    setPrimaryColor("gold");
     welcome.style.backgroundImage = `url("${goldBackground}")`;
   }
 }
