@@ -38,7 +38,6 @@ lightSwitch.addEventListener("click", () => {
 
 const lightOff = () => {
   lightSwitch.textContent = "Light";
-  lightSwitch.style.backgroundColor = "white";
   setBackgroundColor("rgba(25, 25, 25, 1)");
   setTextColor("white");
   welcome.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
@@ -47,7 +46,6 @@ const lightOff = () => {
 
 const lightOn = () => {
   lightSwitch.textContent = "Dark";
-  lightSwitch.style.backgroundColor = "black";
   setBackgroundColor("rgba(230, 230, 230, 1)");
   setTextColor("black");
   welcome.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
