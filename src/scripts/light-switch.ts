@@ -31,8 +31,10 @@ lightSwitch.addEventListener("mouseout", () => {
 lightSwitch.addEventListener("click", () => {
   if (lightSwitch.textContent == "Dark") {
     lightOff();
+    lightSwitch.style.backgroundColor = "white";
   } else {
     lightOn();
+    lightSwitch.style.backgroundColor = "black";
   }
 });
 
