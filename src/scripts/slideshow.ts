@@ -13,6 +13,7 @@ for (let j = 0; j < slideshows.length; ++j) {
   slideshow.style.marginLeft = "auto";
   slideshow.style.marginRight = "auto";
   slideshow.style.overflow = "hidden";
+  slideshow.style.userSelect = "none";
 
   const slides = slideshow.children as HTMLCollectionOf<HTMLElement>;
   for (let k = 0; k < slides.length; ++k) {
@@ -29,6 +30,7 @@ for (let j = 0; j < slideshows.length; ++j) {
   slides[i].style.display = "block";
 
   const leftButton = document.createElement("button");
+  leftButton.textContent = "prev"
   leftButton.setAttribute("slideshow-button", "true");
   leftButton.addEventListener("click", () => {
     hideChildren(slides, (child) => !child.hasAttribute("slideshow-button"));
@@ -41,6 +43,7 @@ for (let j = 0; j < slideshows.length; ++j) {
   leftButton.style.left = "0";
   styleSlideshowBtn(leftButton);
   const rightButton = document.createElement("button");
+  rightButton.textContent = "next"
   rightButton.setAttribute("slideshow-button", "true");
   rightButton.addEventListener("click", () => {
     hideChildren(slides, (child) => !child.hasAttribute("slideshow-button"));
@@ -72,14 +75,16 @@ function hideChildren(
 
 function styleSlideshowBtn(btn: HTMLButtonElement) {
   btn.style.position = "absolute";
-  btn.style.width = "max(10%, 50px)";
-  btn.style.aspectRatio = "1/1";
+  btn.style.width = "max(8%, 4em)";
+  btn.style.height = "2.5em";
+  btn.style.lineHeight = "2.5em";
+  btn.style.userSelect = "none";
   btn.style.borderRadius = "15px";
   btn.style.top = "40px";
-  btn.style.fontSize = "x-large";
-  btn.style.fontWeight = "1000";
+  btn.style.fontSize = "large";
   btn.style.border = "none";
   btn.style.backgroundColor = "var(--text-color)";
+  btn.style.color = "var(--background-color)";
   btn.style.opacity = "0.5";
   btn.style.cursor = "pointer";
   btn.addEventListener("mouseover", () => {
