@@ -36,14 +36,20 @@ function getScrollBarWidth() {
   return w1 - w2;
 }
 
-const WIDTH = window.innerWidth - getScrollBarWidth();
-const HEIGHT = window.innerHeight;
+const width = () => window.innerWidth - getScrollBarWidth();
+const height = () => window.innerHeight;
+
+window.addEventListener("resize", () => {
+  camera.aspect = width() / height();
+  camera.updateProjectionMatrix();
+  renderer.setSize(width(), height());
+});
 
 const scene = new Scene();
-const camera = new PerspectiveCamera(75, WIDTH / HEIGHT, 0.1, 1000);
+const camera = new PerspectiveCamera(75, width() / height(), 0.1, 1000);
 
 const renderer = new WebGLRenderer();
-renderer.setSize(WIDTH, HEIGHT);
+renderer.setSize(width(), height());
 document.body.prepend(renderer.domElement);
 
 const geometry = new IcosahedronGeometry();
@@ -73,7 +79,10 @@ function animate() {
 animate();
 
 export const resetMaterialColor = () => {
-  material.setValues({
-    color: parseInt(primaryColor().substring(2), 16),
-  });
+  // console.log(primaryColor().substring(2));
+  // const color = parseInt(primaryColor().substring(2), 16);
+  // console.log(color);
+  // console.log(color.toString(16));
+  // material.setValues({ color });
+  material.setValues({ color: primaryColor() });
 };

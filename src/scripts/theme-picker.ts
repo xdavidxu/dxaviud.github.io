@@ -3,7 +3,7 @@ import aquamarineBackground from "/images/aquamarine-background.jpg";
 import crimsonBackground from "/images/crimson-background.jpg";
 import goldBackground from "/images/gold-background.jpg";
 import { setPrimaryColor } from "./css-vars";
-// import {resetMaterialColor} from "./three"
+import { resetMaterialColor } from "./three";
 
 const circles = document.getElementsByClassName(
   "circle"
@@ -43,7 +43,7 @@ function changeTheme(theme: string) {
     setPrimaryColor("gold");
     welcome.style.backgroundImage = `url("${goldBackground}")`;
   }
-  // resetMaterialColor();
+  resetMaterialColor();
 }
 
 const SCALE_FACTOR = 1.2;
