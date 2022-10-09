@@ -7,6 +7,7 @@ import {
   PerspectiveCamera,
   Scene,
 } from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { primaryColor } from "./css-vars";
 
 // https://stackoverflow.com/a/986977
@@ -52,6 +53,9 @@ const renderer = new WebGLRenderer();
 renderer.setSize(width(), height());
 document.body.prepend(renderer.domElement);
 
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
 const geometry = new IcosahedronGeometry();
 const material = new MeshPhongMaterial({
   color: parseInt(primaryColor().substring(2), 16),
@@ -66,12 +70,15 @@ light.position.set(-2, 2, 3);
 scene.add(light);
 
 camera.position.z = 5;
+controls.update();
 
 function animate() {
   requestAnimationFrame(animate);
 
   icosahedron.rotation.x += 0.008;
   icosahedron.rotation.y += 0.008;
+
+  controls.update();
 
   renderer.render(scene, camera);
 }
