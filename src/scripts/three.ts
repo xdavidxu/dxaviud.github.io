@@ -79,10 +79,5 @@ function animate() {
 animate();
 
 export const resetMaterialColor = () => {
-  // console.log(primaryColor().substring(2));
-  // const color = parseInt(primaryColor().substring(2), 16);
-  // console.log(color);
-  // console.log(color.toString(16));
-  // material.setValues({ color });
   material.setValues({ color: primaryColor() });
 };
