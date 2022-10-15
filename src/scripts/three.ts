@@ -56,18 +56,21 @@ document.body.prepend(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-const geometry = new IcosahedronGeometry();
-const material = new MeshPhongMaterial({
-  color: parseInt(primaryColor().substring(2), 16),
-});
-const icosahedron = new Mesh(geometry, material);
-scene.add(icosahedron);
+const geometry = new IcosahedronGeometry(1, 0);
+const material = new MeshPhongMaterial({ color: primaryColor() });
+const mesh = new Mesh(geometry, material);
+scene.add(mesh);
 
 const color = 0xffffff;
-const intensity = 1;
-const light = new DirectionalLight(color, intensity);
-light.position.set(-2, 2, 3);
-scene.add(light);
+const light1 = new DirectionalLight(color, 1);
+const light2 = new DirectionalLight(color, 0.3);
+const light3 = new DirectionalLight(color, 0.1);
+light1.position.set(-3, 3, 3);
+light2.position.set(3, -3, 1);
+light3.position.set(2, 2, -3);
+scene.add(light1);
+scene.add(light2);
+scene.add(light3);
 
 camera.position.z = 5;
 controls.update();
@@ -75,8 +78,8 @@ controls.update();
 function animate() {
   requestAnimationFrame(animate);
 
-  icosahedron.rotation.x += 0.008;
-  icosahedron.rotation.y += 0.008;
+  mesh.rotation.x += 0.008;
+  mesh.rotation.y += 0.008;
 
   controls.update();
 
