@@ -2,10 +2,15 @@
   margin: 0 auto;
 }
 
-.slideshow > div > h3 > img {
+.slideshow > div > h3 img {
   background-color: white;
   width: 20%;
   border-radius: 15px;
+  transition: 0.4s;
+}
+
+.slideshow > div > h3 img:hover {
+  transform: scale(1.1);
 }
 
 .slideshow ul {

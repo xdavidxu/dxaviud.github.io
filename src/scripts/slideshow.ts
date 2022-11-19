@@ -8,12 +8,13 @@ for (let j = 0; j < slideshows.length; ++j) {
   const slideshow = slideshows[j];
   slideshow.style.position = "relative";
   slideshow.style.width = "min(100%, 1200px)";
-  slideshow.style.height = "auto";
+  slideshow.style.flexGrow = "1";
   slideshow.style.minHeight = slideshow.getAttribute("min-height") || "69vh";
   slideshow.style.marginLeft = "auto";
   slideshow.style.marginRight = "auto";
   slideshow.style.overflow = "hidden";
   slideshow.style.userSelect = "none";
+  slideshow.style.overflow = "auto";
 
   const slides = slideshow.children as HTMLCollectionOf<HTMLElement>;
   for (let k = 0; k < slides.length; ++k) {
@@ -30,7 +31,7 @@ for (let j = 0; j < slideshows.length; ++j) {
   slides[i].style.display = "block";
 
   const leftButton = document.createElement("button");
-  leftButton.textContent = "prev"
+  leftButton.textContent = "prev";
   leftButton.setAttribute("slideshow-button", "true");
   leftButton.addEventListener("click", () => {
     hideChildren(slides, (child) => !child.hasAttribute("slideshow-button"));
@@ -40,10 +41,10 @@ for (let j = 0; j < slideshows.length; ++j) {
     } while (slides[i].hasAttribute("slideshow-button"));
     slides[i].style.display = "block";
   });
-  leftButton.style.left = "0";
+  leftButton.style.left = "5%";
   styleSlideshowBtn(leftButton);
   const rightButton = document.createElement("button");
-  rightButton.textContent = "next"
+  rightButton.textContent = "next";
   rightButton.setAttribute("slideshow-button", "true");
   rightButton.addEventListener("click", () => {
     hideChildren(slides, (child) => !child.hasAttribute("slideshow-button"));
@@ -52,11 +53,17 @@ for (let j = 0; j < slideshows.length; ++j) {
     } while (slides[i].hasAttribute("slideshow-button"));
     slides[i].style.display = "block";
   });
-  rightButton.style.right = "0";
+  rightButton.style.right = "5%";
   styleSlideshowBtn(rightButton);
 
-  slideshow.appendChild(leftButton);
-  slideshow.appendChild(rightButton);
+  if (slideshow.parentElement) {
+    slideshow.parentElement.style.position = "relative";
+    slideshow.parentElement.appendChild(leftButton);
+    slideshow.parentElement.appendChild(rightButton);
+  } else {
+    slideshow.appendChild(leftButton);
+    slideshow.appendChild(rightButton);
+  }
 
   console.log("Slideshow initialized");
 }
@@ -75,13 +82,13 @@ function hideChildren(
 
 function styleSlideshowBtn(btn: HTMLButtonElement) {
   btn.style.position = "absolute";
-  btn.style.width = "max(8%, 4em)";
-  btn.style.height = "2.5em";
+  btn.style.width = "5em";
+  btn.style.height = "3.6em";
   btn.style.lineHeight = "2.5em";
   btn.style.userSelect = "none";
   btn.style.borderRadius = "15px";
-  btn.style.top = "40px";
-  btn.style.fontSize = "large";
+  btn.style.top = "45vh";
+  btn.style.fontSize = "x-large";
   btn.style.border = "none";
   btn.style.backgroundColor = "var(--text-color)";
   btn.style.color = "var(--background-color)";
