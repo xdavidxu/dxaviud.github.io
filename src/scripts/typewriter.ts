@@ -45,7 +45,7 @@ class TypewriterAnimation {
     span.style.fontSize = "xx-large";
     this.el.innerHTML = span.outerHTML;
 
-    let delta = 150 - Math.random() * 100;
+    let delta = 100 - Math.random() * 75;
 
     if (this.isDeleting) {
       delta /= 2;
